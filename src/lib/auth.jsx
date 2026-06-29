@@ -1,6 +1,7 @@
 // Client-side sample auth (blueprint §5). Production should move to Google
 // Sign-In restricted to the company domain (see CARTA_BLUEPRINT §12).
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+import { store } from './store.js'
 
 const SESSION_KEY = 'carta.session'
 const USERS_KEY = 'carta.users'
@@ -69,6 +70,8 @@ export function AuthProvider({ children }) {
         if (users[e]) return { error: 'An account already exists — please log in.' }
         const user = { name: name.trim(), product, email: e, password, role: 'learner', createdAt: Date.now() }
         persistUser(user)
+        // Mirror a password-free roster record to the shared store for analytics.
+        store.upsertUser({ email: e, name: user.name, product, role: 'learner' })
         const s = { role: 'learner', email: e, name: user.name, product }
         setSession(s)
         return { ok: true, session: s }
@@ -82,6 +85,7 @@ export function AuthProvider({ children }) {
         const user = users[e]
         if (!user || user.role !== 'learner') return { error: 'No learner account found — sign up first.' }
         if (user.password !== password) return { error: 'Incorrect password.' }
+        store.upsertUser({ email: e, name: user.name, product: user.product, role: 'learner' })
         const s = { role: 'learner', email: e, name: user.name, product: user.product }
         setSession(s)
         return { ok: true, session: s }
@@ -101,6 +105,7 @@ export function AuthProvider({ children }) {
         } else if (user.password !== password) {
           return { error: 'Incorrect password.' }
         }
+        store.upsertUser({ email: e, name: user.name || 'Tutor', role: 'tutor' })
         const s = { role: 'tutor', email: e, name: user.name || 'Tutor' }
         setSession(s)
         return { ok: true, session: s }

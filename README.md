@@ -8,8 +8,10 @@ highlighter marks, hand-drawn annotations, film grain, a retro pixel cursor and 
 reactive stipple-brain hero — wrapped around a genuinely functional toolset.
 
 Built with **React 18 + Vite 5 + Tailwind CSS 3 + Framer Motion 11 + React Router 6**
-(HashRouter, so it works on any static host). **No backend** — everything persists in
-the browser via `localStorage`, so it deploys free and can later be wired to a real DB.
+(HashRouter, so it works on any static host). Shared data (forms, quiz responses,
+calendar sessions, completions, the learner roster) is stored in **Vercel Postgres**
+via serverless functions under `/api`; when no backend is configured the app falls
+back to per-browser `localStorage`, so local dev and static-only deploys still work.
 
 ---
 
@@ -69,9 +71,55 @@ npm run preview  # preview the build
 - **Calendar:** seed sessions live in `SEED_EVENTS` (`src/data/content.js`).
 - **Clippings:** optional transparent torn-paper PNGs at `public/clippings/clip-1..3.png`;
   otherwise a drawn newsprint fallback renders.
-- **Persistence:** swap `src/lib/store.js` for API/DB calls to make data multi-user.
+- **Persistence:** shared data already goes through the `/api` functions backed by
+  Vercel Postgres (see below). `src/lib/store.js` is the single sync layer.
 
-Use **Reset demo data** in the Studio to restore the seeded forms.
+Use **Reset demo data** in the Studio to re-pull from the backend (or restore local
+seeds when running without one).
+
+## Shared database (Vercel Postgres)
+
+The portal syncs through serverless functions in `/api`, backed by a Postgres
+database. Everything is optimistic: the UI updates instantly and writes sync in the
+background; if the API is unreachable it transparently falls back to `localStorage`.
+
+**Endpoints**
+
+| Route | Methods | Purpose |
+|-------|---------|---------|
+| `/api/state` | `GET` | The whole shared store: forms, responses, events, completions, users. |
+| `/api/forms` | `POST`, `DELETE?id=` | Save / delete a form, quiz or decision tree. |
+| `/api/responses` | `POST` | Record a form/quiz/tree response. |
+| `/api/events` | `POST`, `DELETE?id=` | Create / delete a calendar session. |
+| `/api/completions` | `POST` | Record a learner's course completion + score. |
+| `/api/users` | `GET`, `POST` | The learner/tutor roster for analytics (no passwords). |
+
+The schema is created and seeded automatically on first request
+(`api/_db.js` → `ensureSchema()`).
+
+**Set it up on Vercel (one time)**
+
+1. Import the repo into Vercel (it auto-detects Vite + the `/api` functions).
+2. In the project, go to **Storage → Create Database → Postgres** (Neon) and connect
+   it. Vercel injects `POSTGRES_URL` (and friends) into the project's env vars.
+3. **Redeploy.** The first request to any `/api/*` route creates the tables and seeds
+   the demo forms + sessions. Done — data is now shared across all users.
+
+**Local development with the database**
+
+```bash
+npm i -g vercel
+vercel link            # link to the Vercel project
+vercel env pull .env.local   # fetch POSTGRES_URL locally
+vercel dev             # runs the SPA + /api functions together
+```
+
+`npm run dev` (plain Vite) also works — it just runs in `localStorage` fallback mode
+because the `/api` functions aren't served.
+
+> **Identity note:** passwords are still the client-side sample auth. The roster in
+> the `users` table carries no passwords. Move to Google Sign-In (verified
+> server-side) for real authentication — see `CARTA_BLUEPRINT.md` §12.
 
 ## Deploy
 
