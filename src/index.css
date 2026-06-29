@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgba(224, 56, 43, 0.22);
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  /* Hide the OS cursor only when the pixel cursor is mounted on fine pointers */
+  html.has-pixel-cursor,
+  html.has-pixel-cursor * {
+    cursor: none;
+  }
+  /* Clip-mode dashed outline for the Note Maker image grabber */
+  html.clip-mode img {
+    outline: 2px dashed #E0382B;
+    outline-offset: 2px;
+    cursor: copy;
+  }
+}
+
+@layer components {
+  /* Highlighter sweep — translucent red, stop-motion via steps() */
+  .hl {
+    background-image: linear-gradient(120deg, rgba(224, 56, 43, 0.28), rgba(224, 56, 43, 0.28));
+    background-repeat: no-repeat;
+    background-position: 0 0.62em;
+    background-size: 0% 0.52em;
+    padding: 0 0.05em;
+  }
+  .hl.is-on {
+    animation: hl-sweep 0.5s steps(6, end) forwards;
+  }
+  @keyframes hl-sweep {
+    to { background-size: 100% 0.52em; }
+  }
+
+  /* Buttons with hard red offset shadow on hover */
+  .btn-ink {
+    @apply inline-flex items-center gap-2 bg-ink text-chalk font-mono text-xs uppercase tracking-widest px-5 py-3 rounded-[3px] border border-ink transition-all duration-150;
+  }
+  .btn-ink:hover {
+    box-shadow: 5px 6px 0 #E0382B;
+    transform: translate(-1px, -1px);
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 bg-transparent text-ink font-mono text-xs uppercase tracking-widest px-5 py-3 rounded-[3px] border border-ink transition-all duration-150;
+  }
+  .btn-ghost:hover {
+    box-shadow: 5px 6px 0 rgba(26,23,18,0.85);
+    transform: translate(-1px, -1px);
+  }
+  .btn-ink:disabled,
+  .btn-ghost:disabled {
+    @apply opacity-40 cursor-not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  /* Mono uppercase pill tag */
+  .tag {
+    @apply inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-[3px] border border-ink/30 text-ink-soft;
+  }
+
+  /* Cream card with hard offset shadow on hover */
+  .paper-card {
+    @apply bg-chalk border border-ink/15 rounded-[4px] transition-all duration-200;
+    box-shadow: 3px 4px 0 rgba(26,23,18,0.12);
+  }
+  .paper-card:hover {
+    box-shadow: 7px 9px 0 rgba(26,23,18,0.18);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Form fields */
+  .field {
+    @apply w-full bg-paper/60 border border-ink/25 rounded-[3px] px-3 py-2.5 text-sm text-ink placeholder:text-stone focus:outline-none focus:border-marker focus:ring-1 focus:ring-marker/40 transition;
+  }
+  .label {
+    @apply block font-mono text-[10px] uppercase tracking-widest text-ink-soft mb-1.5;
+  }
+
+  .section-dark {
+    @apply bg-ink text-chalk;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-marker;
+  }
+}
+
+@layer utilities {
+  .paper-grain {
+    background-image: radial-gradient(rgba(26, 23, 18, 0.05) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .pixelated {
+    image-rendering: pixelated;
+  }
+  .text-stroke {
+    -webkit-text-stroke: 1px #1A1712;
+    color: transparent;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  .tracking-tightest { letter-spacing: -0.045em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
