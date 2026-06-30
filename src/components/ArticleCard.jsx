@@ -19,9 +19,9 @@ export default function ArticleCard({ article }) {
         {/* folder tab */}
         <div className="absolute -top-px left-0 w-24 h-5 bg-[#cdbd97] rounded-tr-[12px] border-r border-t border-[#b9a87f]" />
         <div className="relative z-10 pt-3">
-          <span className="font-mono text-[9px] uppercase tracking-widest text-oxblood">{article.category}</span>
-          <h3 className="mt-1 font-display italic font-bold text-xl text-ink leading-tight">{article.name}</h3>
-          <p className="mt-2 text-sm text-ink/70 line-clamp-2">{article.excerpt}</p>
+          <span className="font-mono text-[9px] uppercase tracking-widest text-oxblood">{article.product}</span>
+          <h3 className="mt-1 font-display italic font-bold text-lg text-ink leading-tight line-clamp-2">{article.name}</h3>
+          <p className="mt-1.5 text-sm text-ink/70 line-clamp-2">{article.excerpt}</p>
         </div>
         <span className="absolute bottom-3 right-4 font-mono text-[9px] uppercase tracking-widest text-ink/50 group-hover:text-marker">Read ↗</span>
 

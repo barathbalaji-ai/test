@@ -22,7 +22,7 @@ back to per-browser `localStorage`, so local dev and static-only deploys still w
 | **Home** | `/` | Editorial hero (stipple brain), five-rooms map, featured courses, philosophy, poster of the week. |
 | **Courses** | `/courses` | Filterable/searchable library. Click a course → opens its **Google Drive** lesson in a new tab **and** a checkpoint flow. |
 | **Posters** | `/posters` | Print-ready poster wall + lightbox (generative fallback when no image). |
-| **Articles** | `/articles` | This month's launches lead + a string-tie folder feed of release notes. |
+| **Articles** | `/articles` | Latest month's release notes; expand the archive to wind a film-reel **timeline range-scroller** (with reeling ambience) across older months. |
 | **Calendar** | `/calendar` | Month grid + agenda of in-person sessions; product/type filters; tutors can add sessions. |
 | **Quiz Studio** | `/studio` | *(tutor)* Build forms, graded quizzes, branching decision trees; view responses. |
 | **Analytics** | `/analytics` | *(tutor/admin)* Swiss dashboard of completions, scores and survey results. |
@@ -66,8 +66,12 @@ npm run preview  # preview the build
   Google Drive share URL (and tune the checkpoint `quiz` questions).
 - **Posters:** drop artwork into `public/posters/` and point each `img` in
   `src/data/content.js` at it (≤~250 KB web JPGs). Missing images fall back to a motif.
-- **Articles:** `src/data/articles.js` → replace the placeholder `url`s with real
-  support-portal links.
+- **Articles:** `src/data/articles.js` is **generated from the team's Site Content
+  sheet** (Feature Releases). Each row that has *both* a description and an article
+  link is kept (rows missing either are skipped); columns map Product → `product`,
+  Feature → `name`, Description → `excerpt`, Release month → `date`/`month`, and the
+  article hyperlink → `url`. The page shows the latest month by default and exposes
+  the rest through the timeline scroller. Re-run the import to refresh.
 - **Calendar:** seed sessions live in `SEED_EVENTS` (`src/data/content.js`).
 - **Clippings:** optional transparent torn-paper PNGs at `public/clippings/clip-1..3.png`;
   otherwise a drawn newsprint fallback renders.
