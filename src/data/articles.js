@@ -1,10 +1,70 @@
 // Auto-generated from the team's Site Content sheet (Feature Releases).
-// Each row that has BOTH a description AND a real article link is kept;
-// rows missing either were skipped per the content rules.
+// A row is kept if it has a description OR an article link; only rows with
+// neither are skipped. `excerpt` and/or `url` may therefore be empty strings.
 // Columns mapped: Product → product, Feature → name, Description → excerpt,
 // Release month → date/month, Article link → url (+ its title as articleTitle).
 
 export const ARTICLES = [
+  {
+    "id": "r1",
+    "name": "FD Unified M1 Releases",
+    "product": "Freshdesk",
+    "excerpt": "Newly Revamped Freshdesk Unified. M1 release would cover items like SLA, Routing, Webchat, Inbox, Contacts, Dashboards",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-01",
+    "month": "2025-10"
+  },
+  {
+    "id": "r2",
+    "name": "Voice AI",
+    "product": "Freshcaller",
+    "excerpt": "New Third party Voice AI tool",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-02",
+    "month": "2025-10"
+  },
+  {
+    "id": "r3",
+    "name": "AI Agent Skills",
+    "product": "Freddy AI",
+    "excerpt": "Set up Agent Skills with the help of Freddy CoPilot",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-03",
+    "month": "2025-10"
+  },
+  {
+    "id": "r4",
+    "name": "Conversational Insights CX",
+    "product": "Freddy AI",
+    "excerpt": "Get insights through conversational queries with Freddy",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-04",
+    "month": "2025-10"
+  },
+  {
+    "id": "r5",
+    "name": "Freddy Cx Co Pilot",
+    "product": "Freddy AI",
+    "excerpt": "Similar Ticket Suggestor, Auto Triage, Content Assist, Live Translate",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-05",
+    "month": "2025-10"
+  },
+  {
+    "id": "r6",
+    "name": "AI Agents",
+    "product": "Freddy AI",
+    "excerpt": "Vertical AI Agents; Agentic Workflow",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-10-06",
+    "month": "2025-10"
+  },
   {
     "id": "r7",
     "name": "Freddy AI Agent in  End User Portal.",
@@ -26,12 +86,302 @@ export const ARTICLES = [
     "month": "2025-10"
   },
   {
+    "id": "r12",
+    "name": "Conversational Insights & Customized Insights",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Create Customized Insights in Freddy AI : Freshservice",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011668-create-customized-insights-in-freddy-ai",
+    "date": "2025-10-12",
+    "month": "2025-10"
+  },
+  {
+    "id": "r13",
+    "name": "Service Catalog 2.0",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "How to Add and Manage Services in Freshservice's Service Catalog",
+    "url": "https://support.freshservice.com/support/solutions/articles/199643-configure-the-service-catalog",
+    "date": "2025-10-13",
+    "month": "2025-10"
+  },
+  {
+    "id": "r14",
+    "name": "Intelligent Routing :\n- Skill [AI] \n- Load and availability [Non AI])",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Ticket Assignment Policies, Ticket Routing Framework, Agent Availability, Agent Workload, Agent Skills : Freshservice",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011530-intelligent-ticket-assignment-based-on-work-schedule-skills-and-load",
+    "date": "2025-10-14",
+    "month": "2025-10"
+  },
+  {
+    "id": "r15",
+    "name": "DEX Integration with Riverbed Aternity (Recap, with link)",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Riverbed Aternity for Freshservice app Integration",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011370-riverbed-aternity-for-freshservice-app-integration",
+    "date": "2025-10-15",
+    "month": "2025-10"
+  },
+  {
+    "id": "r18",
+    "name": "Email AI Agent - Test Preview",
+    "product": "Freshdesk",
+    "excerpt": "",
+    "articleTitle": "Manage, Test & Troubleshoot Your Email AI Agent : Freshdesk Support",
+    "url": "https://support.freshdesk.com/en/support/solutions/articles/50000011217-email-ai-agent-testing-and-analytics",
+    "date": "2025-10-18",
+    "month": "2025-10"
+  },
+  {
+    "id": "r19",
+    "name": "Faster WhatsApp onboarding",
+    "product": "Freshdesk",
+    "excerpt": "",
+    "articleTitle": "WhatsApp Business integration for Freshdesk",
+    "url": "https://support.freshdesk.com/en/support/solutions/articles/238137-integrating-your-whatsapp-business-account",
+    "date": "2025-10-19",
+    "month": "2025-10"
+  },
+  {
+    "id": "r20",
+    "name": "Take action on RCA insights with ticket drill-down",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "How to use Freddy to generate reply suggestions for tickets? : Freshservice",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000008500-how-to-use-freddy-to-generate-reply-suggestions-for-tickets-",
+    "date": "2025-10-20",
+    "month": "2025-10"
+  },
+  {
+    "id": "r21",
+    "name": "Test contact details for on-call notifications",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "How to configure and test notifications for On-Call schedules in Freshservice?",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011676-how-to-configure-and-test-notifications-for-on-call-schedules-in-freshservice-",
+    "date": "2025-10-21",
+    "month": "2025-10"
+  },
+  {
+    "id": "r22",
+    "name": "Introducing approvals for Post-incident reports",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "How to create and assign approvals for Post Incident Reports in Freshservice?",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011497-how-to-create-and-assign-approvals-for-post-incident-reports-in-freshservice-",
+    "date": "2025-10-22",
+    "month": "2025-10"
+  },
+  {
+    "id": "r23",
+    "name": "Dedicated opt-in for Alert Workflows permissions",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "How to create and assign approvals for Post Incident Reports in Freshservice?",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011497-how-to-create-and-assign-approvals-for-post-incident-reports-in-freshservice-",
+    "date": "2025-10-23",
+    "month": "2025-10"
+  },
+  {
+    "id": "r33",
+    "name": "Day-based proration updates to subscriptions",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Day-based Proration Updates to Subscriptions : Freshservice",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011666-day-based-proration-updates-to-subscriptions",
+    "date": "2025-10-31",
+    "month": "2025-10"
+  },
+  {
+    "id": "r34",
+    "name": "Freshservice billing system upgrade",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Freshservice Billing System Upgrade",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011665-freshservice-billing-system-upgrade",
+    "date": "2025-10-31",
+    "month": "2025-10"
+  },
+  {
+    "id": "r36",
+    "name": "Automox Orchestration App for Freshservice",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "Installation Guide for Automox Orchestration App : Freshservice",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011582-installation-guide-for-automox-orchestration-app",
+    "date": "2025-10-31",
+    "month": "2025-10"
+  },
+  {
+    "id": "r37",
+    "name": "Product UI Change",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "DEW Article for Freshworks (WIP)",
+    "url": "https://docs.google.com/document/d/1qzmM164EX9wF3JV5Epsw66r4DWHCKfCZcgk16GmNo_4/edit?tab=t.0",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r39",
+    "name": "Standalone FD Migration - SLAs and Routing",
+    "product": "Freshdesk",
+    "excerpt": "",
+    "articleTitle": "Migration Playbook",
+    "url": "https://confluence.freshworks.com/pages/viewpage.action?spaceKey=FDCORE&title=Migration+Playbook%3A+Existing+Freshdesk+Standalone+account+migration+to+unified+Freshdesk+platform",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r42",
+    "name": "Federated knowledge search updates",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011702-enhance-freddy-ai-agent-search-with-confluence-integration",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011702-enhance-freddy-ai-agent-search-with-confluence-integration",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r43",
+    "name": "Automate and Streamline Problem Management with Business Rules",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011730-business-rules-for-problem-management",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011730-business-rules-for-problem-management",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r44",
+    "name": "On-call shift start reminder for Admins and Agents",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011675-how-to-set-up-shift-reminders-for-on-call-schedules-in-freshservice-",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011675-how-to-set-up-shift-reminders-for-on-call-schedules-in-freshservice-",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r45",
+    "name": "Escalation policy for individual responders",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011752-how-to-set-up-escalation-policies-as-an-agent-",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011752-how-to-set-up-escalation-policies-as-an-agent-",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r46",
+    "name": "Access original alert payloads",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000003698-how-to-set-up-alert-management-in-freshservice#:~:text=The%20JSON%20payloads%20received%20from%20webhooks%20are%20displayed%20in%20a%20column%20to%20help%20with%20debugging.",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000003698-how-to-set-up-alert-management-in-freshservice",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r47",
+    "name": "Revamped public status page",
+    "product": "Freshservice",
+    "excerpt": "The public status page has been revamped for a faster, more reliable experience. This page now features a mobile-friendly design with more accurate uptime calculations and correct incident ordering.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r48",
+    "name": "New filter attributes for asset APIs",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://api.freshservice.com/#changelog",
+    "url": "https://api.freshservice.com/",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
     "id": "r49",
     "name": "Extended Business Rules to Move Ticket and Move Change Forms",
     "product": "Freshservice",
     "excerpt": "Freshservice has enhanced business rules to support the Move Ticket and Move Change forms, providing admins with greater control over how items are moved and what information must be filled out or hidden before the move.",
     "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011704-business-rules-for-moving-items-across-workspaces",
     "url": "https://support.freshservice.com/support/solutions/articles/50000011704-business-rules-for-moving-items-across-workspaces",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r50",
+    "name": "Audit Logs for Journey Configuration",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now enhances the Audit Logs module to provide admins with greater visibility and control over changes made to Journeys configurations.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r51",
+    "name": "Enhanced Journey Request Logs and Role-Based Access Controls",
+    "product": "Freshservice",
+    "excerpt": "Freshservice introduces two key enhancements to improve visibility, security, and governance in the Journeys module",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r52",
+    "name": "Journeys Support in the Analytics Module",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now integrates the Journeys module with Analytics, enabling teams to gain actionable, data-driven insights into employee lifecycle processes.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r53",
+    "name": "Simplify Complex and Repetitive Workflow Automation with Looping",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011586-looping-in-workflow-automator",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011586-looping-in-workflow-automator",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r54",
+    "name": "Journeys Sync Between Sandbox and Production",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011681-sandbox-in-journeys",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011681-sandbox-in-journeys",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r55",
+    "name": "Streamline Workflow Creation and Maintenance with Subflows",
+    "product": "Freshservice",
+    "excerpt": "",
+    "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011585-reusable-components-subflows-in-workflow-automator",
+    "url": "https://support.freshservice.com/support/solutions/articles/50000011585-reusable-components-subflows-in-workflow-automator",
+    "date": "2025-11-01",
+    "month": "2025-11"
+  },
+  {
+    "id": "r56",
+    "name": "Simplified Role Deletion",
+    "product": "Freshdesk",
+    "excerpt": "You can now delete roles even if they’re linked to deactivated agents. They’ll automatically be moved to the default agent role based on their agent type.",
+    "articleTitle": "",
+    "url": "",
     "date": "2025-11-01",
     "month": "2025-11"
   },
@@ -76,6 +426,36 @@ export const ARTICLES = [
     "month": "2025-11"
   },
   {
+    "id": "r61",
+    "name": "Preview and insert articles with split-screen view",
+    "product": "Freshservice",
+    "excerpt": "The ticket reply experience has been enhanced with a new collapsible split view that displays the solution article list with a full article preview.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-01",
+    "month": "2025-12"
+  },
+  {
+    "id": "r62",
+    "name": "Controlled rollout of Freddy AI Agent on support portals",
+    "product": "Freshservice",
+    "excerpt": "Freshservice admins can now enable Freddy AI Agent on specific support portals for a targeted set of requesters, allowing them to evaluate the experience before a broader launch.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-02",
+    "month": "2025-12"
+  },
+  {
+    "id": "r63",
+    "name": "View SharePoint information insights",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now allows admins to gain visibility into SharePoint sync activity and diagnose issues more effectively.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-03",
+    "month": "2025-12"
+  },
+  {
     "id": "r64",
     "name": "Filter for suppressed alerts",
     "product": "Freshservice",
@@ -93,6 +473,46 @@ export const ARTICLES = [
     "articleTitle": "https://community.freshworks.com/product-updates/freshservice-release-notes-december-2025-45104",
     "url": "https://community.freshworks.com/product-updates/freshservice-release-notes-december-2025-45104",
     "date": "2025-12-05",
+    "month": "2025-12"
+  },
+  {
+    "id": "r66",
+    "name": "Clone Journey configurations for faster setup",
+    "product": "Freshservice",
+    "excerpt": "Admins can now clone any existing Journey configuration with a single click.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-06",
+    "month": "2025-12"
+  },
+  {
+    "id": "r67",
+    "name": "Manual updates retained in Journey Requests",
+    "product": "Freshservice",
+    "excerpt": "Manual updates to the assignee or due date made from the Journey Request details view will now always be honored, even if the Initiator form is updated later with different values.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-07",
+    "month": "2025-12"
+  },
+  {
+    "id": "r68",
+    "name": "Link tickets to their parent Journey Requests",
+    "product": "Freshservice",
+    "excerpt": "When a ticket is created from a Journey Request, Freshservice automatically adds the parent Journey Request to the ticket’s Associations tab.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-08",
+    "month": "2025-12"
+  },
+  {
+    "id": "r69",
+    "name": "Preserve cancelled activities for complete journey history",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now preserves cancelled Activities and marks their underlying Tasks as completed, ensuring a complete and auditable history of every Journey.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-09",
     "month": "2025-12"
   },
   {
@@ -136,6 +556,46 @@ export const ARTICLES = [
     "month": "2025-12"
   },
   {
+    "id": "r74",
+    "name": "Clone Journey configurations for faster setup",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "Admins can now clone any existing Journey configuration with a single click",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-14",
+    "month": "2025-12"
+  },
+  {
+    "id": "r75",
+    "name": "Manual updates retained in Journey Requests",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "Manual updates to the assignee or due date made from the Journey Request details view will now always be honored,",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-15",
+    "month": "2025-12"
+  },
+  {
+    "id": "r76",
+    "name": "Link tickets to their parent Journey Requests",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "When a ticket is created from a Journey Request, Freshservice for Business Teams automatically adds the parent Journey Request to the ticket’s Associations tab.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-16",
+    "month": "2025-12"
+  },
+  {
+    "id": "r77",
+    "name": "Preserve cancelled activities for complete journey history",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "Freshservice for Business Teams now preserves cancelled Activities and marks their underlying Tasks as completed, ensuring a complete and auditable history of every Journey.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-17",
+    "month": "2025-12"
+  },
+  {
     "id": "r78",
     "name": "Transform AI Agents with Powerful API Actions",
     "product": "Freshdesk",
@@ -176,6 +636,16 @@ export const ARTICLES = [
     "month": "2025-12"
   },
   {
+    "id": "r82",
+    "name": "Simplified Role Deletion",
+    "product": "Freshdesk",
+    "excerpt": "You can now delete roles even if they are linked to deactivated agents.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-22",
+    "month": "2025-12"
+  },
+  {
     "id": "r83",
     "name": "Similar tickets under Copilot",
     "product": "Freshdesk",
@@ -193,6 +663,16 @@ export const ARTICLES = [
     "articleTitle": "https://support.freshdesk.com/en/support/solutions/articles/195170-set-up-emails-on-gmail-microsoft-office-and-other-customer-servers",
     "url": "https://support.freshdesk.com/en/support/solutions/articles/195170-set-up-emails-on-gmail-microsoft-office-and-other-customer-servers",
     "date": "2025-12-24",
+    "month": "2025-12"
+  },
+  {
+    "id": "r85",
+    "name": "New Time & Assignment Metrics",
+    "product": "Freshdesk",
+    "excerpt": "We’ve added 18 new metrics to give deeper visibility into ticket handling.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-25",
     "month": "2025-12"
   },
   {
@@ -236,6 +716,16 @@ export const ARTICLES = [
     "month": "2025-12"
   },
   {
+    "id": "r90",
+    "name": "Introducing new date picker filter",
+    "product": "Freshdesk",
+    "excerpt": "We’ve introduced an advanced date picker filter designed to enhance the user experience and address existing accessibility concerns.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-26",
+    "month": "2025-12"
+  },
+  {
     "id": "r91",
     "name": "Introducing Vertical AI Agents",
     "product": "Freshchat",
@@ -266,6 +756,56 @@ export const ARTICLES = [
     "month": "2025-12"
   },
   {
+    "id": "r94",
+    "name": "Easier Workflow Deletion",
+    "product": "Freshchat",
+    "excerpt": "Admins can now remove workflows directly from the Workflow Library.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-30",
+    "month": "2025-12"
+  },
+  {
+    "id": "r95",
+    "name": "New Freshdesk Omni Course",
+    "product": "Omni",
+    "excerpt": "A quick run through on all things FD Omni that will familarise you to what is new and what has changed",
+    "articleTitle": "",
+    "url": "",
+    "date": "2025-12-30",
+    "month": "2025-12"
+  },
+  {
+    "id": "r96",
+    "name": "Shopify app installation for Freshdesk",
+    "product": "Freshdesk",
+    "excerpt": "Currently, installing the Shopify app for Freshdesk requires creating a custom app via the Shopify Admin settings. Shopify has announced that this approach will be deprecated. Going forward, custom apps can no longer be created from the Admin page and must instead be created through the Shopify Developer Dashboard. This change will take effect on January 1, 2026.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-21",
+    "month": "2026-01"
+  },
+  {
+    "id": "r97",
+    "name": "Auto Time Format – ms Precision",
+    "product": "Freshdesk",
+    "excerpt": "Default auto time format in Analytics now supports millisecond (ms) precision and displays units in chart axes and export headers, improving clarity for sub-second time metrics.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-22",
+    "month": "2026-01"
+  },
+  {
+    "id": "r98",
+    "name": "Auto Time Format – ms Precision",
+    "product": "Freshchat",
+    "excerpt": "Default auto time format in Analytics now supports millisecond (ms) precision and displays units in chart axes and export headers, improving clarity for sub-second time metrics.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-23",
+    "month": "2026-01"
+  },
+  {
     "id": "r99",
     "name": "Efficient task management using business rules",
     "product": "Freshservice",
@@ -276,6 +816,16 @@ export const ARTICLES = [
     "month": "2026-01"
   },
   {
+    "id": "r100",
+    "name": "Secure deletion for restricted workspaces",
+    "product": "Freshservice",
+    "excerpt": "Deleting a restricted workspace now requires approval from the workspace manager when the action is initiated by a play-god admin who is not a workspace manager for that workspace.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-25",
+    "month": "2026-01"
+  },
+  {
     "id": "r101",
     "name": "Manage alerts for incidents",
     "product": "Freshservice",
@@ -283,6 +833,16 @@ export const ARTICLES = [
     "articleTitle": "Alert Management in Freshservice - An Overview",
     "url": "https://support.freshservice.com/support/solutions/articles/50000002885-alert-management-in-freshservice-an-overview",
     "date": "2026-01-26",
+    "month": "2026-01"
+  },
+  {
+    "id": "r102",
+    "name": "PIR publishing and distribution",
+    "product": "Freshservice",
+    "excerpt": "You can now share a published Post Incident Reports (PIR) directly from Freshservice with individual agents and requesters, and revoke the access anytime",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-27",
     "month": "2026-01"
   },
   {
@@ -316,6 +876,16 @@ export const ARTICLES = [
     "month": "2026-01"
   },
   {
+    "id": "r105",
+    "name": "Rich text editor for Journey emails",
+    "product": "Freshservice",
+    "excerpt": "Freshservice introduces a rich text email editor for Journey activities, enabling teams to create clear and professional communications.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-30",
+    "month": "2026-01"
+  },
+  {
     "id": "r109",
     "name": "Enhanced global search and dashboards",
     "product": "Freshservice",
@@ -323,6 +893,26 @@ export const ARTICLES = [
     "articleTitle": "How Search Works in Freshservice",
     "url": "https://support.freshservice.com/support/solutions/articles/231703-how-search-works-in-freshservice",
     "date": "2026-01-30",
+    "month": "2026-01"
+  },
+  {
+    "id": "r106",
+    "name": "Enhanced auto time format (ms) precision in analytics",
+    "product": "Freshservice",
+    "excerpt": "Default auto time format in Analytics now supports millisecond (ms) precision and displays units in chart axes and export headers, improving clarity for sub-second time metrics.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-31",
+    "month": "2026-01"
+  },
+  {
+    "id": "r110",
+    "name": "Move problems between workspaces via business rules",
+    "product": "Freshservice",
+    "excerpt": "Admins can now use business rules to control when and how agents move problems across workspaces.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-01-31",
     "month": "2026-01"
   },
   {
@@ -353,6 +943,56 @@ export const ARTICLES = [
     "articleTitle": "Dropbox Sign for e-signatures in documents : Freshservice Support",
     "url": "https://support.freshservice.com/support/solutions/articles/50000011865-dropbox-sign-for-e-signatures-in-documents",
     "date": "2026-02-03",
+    "month": "2026-02"
+  },
+  {
+    "id": "r114",
+    "name": "E-sign status and document access on mobile",
+    "product": "Freshservice",
+    "excerpt": "Agents and requesters can now track e-signature progress and access signed documents directly through the Ticket Detail screen on the mobile app.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-04",
+    "month": "2026-02"
+  },
+  {
+    "id": "r115",
+    "name": "Business rules for tasks on mobile",
+    "product": "Freshservice",
+    "excerpt": "Business rules configured for tasks in the Freshservice web application now apply to the mobile app to ensure consistent behavior across platforms.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-05",
+    "month": "2026-02"
+  },
+  {
+    "id": "r116",
+    "name": "Major incident promotion and demotion on mobile",
+    "product": "Freshservice",
+    "excerpt": "Agents can now promote tickets to major incidents or demote them to standard incidents directly from the mobile app, ensuring immediate alignment with critical workflows.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-06",
+    "month": "2026-02"
+  },
+  {
+    "id": "r117",
+    "name": "On-call shift notifications on mobile",
+    "product": "Freshservice",
+    "excerpt": "On-call agents now receive push notifications for upcoming shift starts and shift delegations directly on their mobile devices.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-07",
+    "month": "2026-02"
+  },
+  {
+    "id": "r118",
+    "name": "Rails framework upgrade",
+    "product": "Freshservice",
+    "excerpt": "Freshservice will undergo a major upgrade to its core backend framework, moving from Rails 6.1 to Rails 7.0. This upgrade brings performance improvements, stronger security defaults, and a more modern foundation for future development, helping ensure long-term maintainability.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-08",
     "month": "2026-02"
   },
   {
@@ -393,6 +1033,26 @@ export const ARTICLES = [
     "articleTitle": "Dropbox Sign for e-signatures in documents : Freshservice Support",
     "url": "https://support.freshservice.com/support/solutions/articles/50000011865-dropbox-sign-for-e-signatures-in-documents",
     "date": "2026-02-12",
+    "month": "2026-02"
+  },
+  {
+    "id": "r123",
+    "name": "E-sign status and document access on mobile",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "This feature is exclusive to accounts using the native Freshservice e-signer; third-party integrations are not supported. Agents and requesters can now track e-signature progress and access signed documents directly through the Ticket Detail screen on the mobile app.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-13",
+    "month": "2026-02"
+  },
+  {
+    "id": "r124",
+    "name": "Business rules for tasks on mobile",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "Business rules configured for tasks in the Freshservice web application now apply to the mobile app to ensure consistent behavior across platforms",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-02-14",
     "month": "2026-02"
   },
   {
@@ -446,6 +1106,46 @@ export const ARTICLES = [
     "month": "2026-03"
   },
   {
+    "id": "r130",
+    "name": "Shared fields support for workflows and custom objects",
+    "product": "Freshservice",
+    "excerpt": "Admins can now access shared fields directly across key workflow and custom object configurations without first selecting a parent service item.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-27",
+    "month": "2026-03"
+  },
+  {
+    "id": "r131",
+    "name": "Idle session timeout notifications",
+    "product": "Freshservice",
+    "excerpt": "The Freshservice logged-in experience is now enhanced to provide better clarity when your session ends due to inactivity.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-28",
+    "month": "2026-03"
+  },
+  {
+    "id": "r132",
+    "name": "Reorganization of service desk and support portal settings",
+    "product": "Freshservice",
+    "excerpt": "The Admin Settings for your service desk and support portals are now streamlined to help manage these more intuitively. By grouping interrelated features, we’ve eliminated the need to jump between different sections to complete your setup.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-29",
+    "month": "2026-03"
+  },
+  {
+    "id": "r133",
+    "name": "Update on enhanced global search and dashboards",
+    "product": "Freshservice",
+    "excerpt": "As part of the launch of Enhanced Global Search and Dashboard capabilities for Tasks released in February 2026, Pro and Enterprise accounts in the US datacenter are currently undergoing a backend migration to support these enhancements",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-30",
+    "month": "2026-03"
+  },
+  {
     "id": "r134",
     "name": "Enhanced document management and data mapping",
     "product": "Freshservice",
@@ -462,6 +1162,26 @@ export const ARTICLES = [
     "excerpt": "Freshservice now supports Adobe Acrobat Sign as an e-signature provider, allowing you to send documents for signature directly from tickets.",
     "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000011868-adobe-acrobat-sign-for-e-signatures-in-documents",
     "url": "https://support.freshservice.com/support/solutions/articles/50000011868-adobe-acrobat-sign-for-e-signatures-in-documents",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r136",
+    "name": "Manage journeys with enhanced dashboards and filters",
+    "product": "Freshservice",
+    "excerpt": "Admins can now track employee transitions more effectively with a new Journey Activities list view and real-time dashboard charts.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r137",
+    "name": "Attach documents to Journey emails",
+    "product": "Freshservice",
+    "excerpt": "Admins can now attach documents to Journey emails to share important resources during employee milestones.",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-03-31",
     "month": "2026-03"
   },
@@ -526,6 +1246,46 @@ export const ARTICLES = [
     "month": "2026-03"
   },
   {
+    "id": "r144",
+    "name": "Discontinuation of Pivotal Tracker integration",
+    "product": "Freshservice",
+    "excerpt": "The Pivotal Tracker integration in Freshservice will be discontinued, effective March 5, 2026.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r145",
+    "name": "Discontinuation of Yammer integration",
+    "product": "Freshservice",
+    "excerpt": "The Yammer integration in Freshservice will be discontinued, effective March 5, 2026. This update follows the phasing out of the Yammer app by Microsoft, as the underlying service is no longer supported or functional.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r146",
+    "name": "Add services across workspaces to your status page",
+    "product": "Freshservice",
+    "excerpt": "Admins can now configure status pages to include services from other workspaces, enabling unified and consistent communication across organizational boundaries.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r147",
+    "name": "Improved filtering support in Satisfaction Survey reports",
+    "product": "Freshdesk",
+    "excerpt": "Under Satisfaction Survey reports, an issue where customers were unable to use the Group By filter has been resolved",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
     "id": "r148",
     "name": "Enhanced canned response recommendations",
     "product": "Freshdesk",
@@ -566,6 +1326,26 @@ export const ARTICLES = [
     "month": "2026-03"
   },
   {
+    "id": "r152",
+    "name": "Smarter Copilot seat assignment",
+    "product": "Freshdesk",
+    "excerpt": "Assign Copilot licenses in one click with pre-computed agent recommendations, ranked by tickets resolved.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r153",
+    "name": "Changes in the Agent Performance Report",
+    "product": "Freshdesk",
+    "excerpt": "We’ve updated the Agent Performance Report (AHT tab) to improve clarity and accuracy.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
     "id": "r154",
     "name": "Contact and Company Record Integrity and Duplicate Prevention",
     "product": "Freshdesk",
@@ -592,6 +1372,36 @@ export const ARTICLES = [
     "excerpt": "This feature leverages the Freshdesk Interface API to programmatically identify and retrieve the filenames of all attachments within a ticket response.",
     "articleTitle": "https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/front-end-apps/interface-methods/",
     "url": "https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/front-end-apps/interface-methods/",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r157",
+    "name": "New date picker",
+    "product": "Freshdesk",
+    "excerpt": "An advanced date picker that improves the user experience and resolves accessibility issues",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r158",
+    "name": "Topic support for WebChat",
+    "product": "Freshdesk",
+    "excerpt": "The source info field will become available for consumption in ticket filters, ticket details, automations, and workflows.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-03-31",
+    "month": "2026-03"
+  },
+  {
+    "id": "r159",
+    "name": "AI Workflows powering actionable context",
+    "product": "Freshchat",
+    "excerpt": "AI Agent Workflows will let you capture information like customer details (and API results) and save it straight into Freshchat/Freshdesk Omni properties",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-03-31",
     "month": "2026-03"
   },
@@ -646,12 +1456,82 @@ export const ARTICLES = [
     "month": "2026-04"
   },
   {
+    "id": "r169",
+    "name": "Field validations for service catalog items",
+    "product": "Freshservice",
+    "excerpt": "Administrators can now use Regex validation for pattern matching (for specific custom and shared field types), or Custom validation for complex logic (for custom field types only) to configure field validation rules for service catalog items.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
     "id": "r170",
     "name": "Re-trigger escalation on agent removal",
     "product": "Freshservice",
     "excerpt": "Escalation policies are now re-evaluated when an assigned agent is unassigned from a ticket.",
     "articleTitle": "https://support.freshservice.com/support/solutions/articles/50000012681-configure-field-validations-for-service-catalog-items",
     "url": "https://support.freshservice.com/support/solutions/articles/50000012681-configure-field-validations-for-service-catalog-items",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r171",
+    "name": "Simplify journeys with dynamic form sections",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now allows admins to show or hide form sections based on dropdown selections",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r172",
+    "name": "Automate decision-making with approvals in Journeys",
+    "product": "Freshservice",
+    "excerpt": "Freshservice has introduced native approval support within Journeys, allowing admins to insert critical checkpoints into automated workflows.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r173",
+    "name": "Enhance workflows with advanced lookup field support",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now supports lookup fields within Journeys, enabling users to access specific object properties, such as email addresses and work location, directly in workflows.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r174",
+    "name": "Automate service item details with expanded prefill support",
+    "product": "Freshservice",
+    "excerpt": "Freshservice has enhanced the journey builder to support prefill capabilities for all service item field types, including attachments, rich text, and date fields.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r175",
+    "name": "Automate provisioning with mandatory items in Journeys",
+    "product": "Freshservice",
+    "excerpt": "Admins can now use direct provisioning and mandatory service items to streamline Journeys.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r176",
+    "name": "Apply business rules to service items in Journeys",
+    "product": "Freshservice",
+    "excerpt": "Journeys now honors the business rules configured within your service catalog, ensuring form tasks behave consistently for every user.",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-04-26",
     "month": "2026-04"
   },
@@ -676,12 +1556,42 @@ export const ARTICLES = [
     "month": "2026-04"
   },
   {
+    "id": "r179",
+    "name": "New \"Me\" filter for personalized reporting",
+    "product": "Freshservice",
+    "excerpt": "The Agent and Requester name filters in Analytics reporting will now include a ‘Me’ option",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
     "id": "r180",
     "name": "Configurable Start Day for reports",
     "product": "Freshservice",
     "excerpt": "You can now customize the start day of the week for individual reports.",
     "articleTitle": "https://support.freshworks.com/support/solutions/articles/50000001078-building-a-new-report#Configurable-Start-Day-for-reports",
     "url": "https://support.freshworks.com/support/solutions/articles/50000001078-building-a-new-report",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r181",
+    "name": "Enhanced Knowledge Base with Article Templates",
+    "product": "Freshservice",
+    "excerpt": "Standardize documentation with the new Article Templates feature in the Knowledge Base module.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r182",
+    "name": "New event triggers in workflow automations",
+    "product": "Freshservice",
+    "excerpt": "To streamline service desk operations, the following four new event triggers have been introduced in workflow automations, which significantly enhance operational efficiency by providing real-time visibility into service level breaches.",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-04-26",
     "month": "2026-04"
   },
@@ -736,6 +1646,16 @@ export const ARTICLES = [
     "month": "2026-04"
   },
   {
+    "id": "r188",
+    "name": "Enhanced Ticket Details Experience with Real-Time Updates",
+    "product": "Freshdesk",
+    "excerpt": "The Ticket Details page now features a refreshed, modern interface designed to provide a consistent experience across both real-time and non-real-time channels.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
     "id": "r189",
     "name": "Real-Time Ticket Navigation from List View",
     "product": "Freshdesk",
@@ -752,6 +1672,26 @@ export const ARTICLES = [
     "excerpt": "To enhance your security posture, we’ve blocked the use of disposable email addresses for agent profiles.",
     "articleTitle": "https://support.freshdesk.com/en/support/solutions/articles/37591-add-or-edit-support-agents",
     "url": "https://support.freshdesk.com/en/support/solutions/articles/37591-add-or-edit-support-agents",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r191",
+    "name": "Note Limit for Improved Ticket Performance",
+    "product": "Freshdesk",
+    "excerpt": "Tickets now support up to 400 notes to maintain optimal performance and manageable conversation threads.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r192",
+    "name": "Interface API Support for Threads Forwarding",
+    "product": "Freshdesk",
+    "excerpt": "We are re-introducing Interface API support for the \"From\" email address field within the Forwarding section of Ticket Threads",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-04-26",
     "month": "2026-04"
   },
@@ -773,6 +1713,36 @@ export const ARTICLES = [
     "articleTitle": "https://community.freshworks.com/product-updates/freshdesk-omni-release-notes-march-2026-46322",
     "url": "https://community.freshworks.com/product-updates/freshdesk-omni-release-notes-march-2026-46322",
     "date": "2026-04-26",
+    "month": "2026-04"
+  },
+  {
+    "id": "r165",
+    "name": "Introducing AI Agent Studio in Freshservice",
+    "product": "Freshservice",
+    "excerpt": "Freshservice is launching AI Agent Studio, a centralized command center designed to build, test, and deploy intelligent AI agents. This studio helps you transform static knowledge and workflows into active service assets that evolve with your business needs.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-27",
+    "month": "2026-04"
+  },
+  {
+    "id": "r166",
+    "name": "Quantify AI adoption with Freddy AI Copilot impact reports",
+    "product": "Freshservice",
+    "excerpt": "Measure the strategic value of Freddy AI Copilot with new impact reports.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-28",
+    "month": "2026-04"
+  },
+  {
+    "id": "r167",
+    "name": "New child-parent ticket association",
+    "product": "Freshservice",
+    "excerpt": "Support agents can now link a parent ticket directly from any child ticket. This helps improve seamless ticket association and enhanced relationship tracking.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-04-29",
     "month": "2026-04"
   },
   {
@@ -816,6 +1786,16 @@ export const ARTICLES = [
     "month": "2026-05"
   },
   {
+    "id": "r198",
+    "name": "Unified AI Insights and Analytics experience",
+    "product": "Freshservice",
+    "excerpt": "For Enterprise customers with AI Insights enabled: Analytics and AI Insights now live together under a single AI Insights and Analytics tab. A toggle lets users switch between strategic signals and detailed reports without leaving the screen. For all other customers without AI Insights enabled: The Analytics icon has moved to the top of the left navigation rail for quicker access. Functionality remains the same.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-29",
+    "month": "2026-05"
+  },
+  {
     "id": "r199",
     "name": "Resolve tickets faster with Copilot Resolution Insights",
     "product": "Freshservice",
@@ -846,6 +1826,16 @@ export const ARTICLES = [
     "month": "2026-05"
   },
   {
+    "id": "r202",
+    "name": "Alert aggregation enhancements",
+    "product": "Freshservice",
+    "excerpt": "The alert aggregation field limit for Custom Webhook integrations under IT Operations Management > Monitoring Tool Integration has been increased from two to four fields.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
     "id": "r203",
     "name": "Auto-save generated documents to Google Drive",
     "product": "Freshservice",
@@ -856,12 +1846,102 @@ export const ARTICLES = [
     "month": "2026-05"
   },
   {
+    "id": "r204",
+    "name": "Standardizing request fulfillment with agent checklists",
+    "product": "Freshservice",
+    "excerpt": "Freshservice now lets admins build agent checklists to guide consistent, step-by-step fulfillment of service requests.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
     "id": "r205",
     "name": "Passkey-based authentication for Freshworks",
     "product": "Freshservice",
     "excerpt": "We’ve introduced passkey-based authentication across Freshworks, enabling secure and passwordless sign-in for all users.",
     "articleTitle": "https://support.freshworks.com/support/solutions/articles/50000012801-log-in-using-passkey",
     "url": "https://support.freshworks.com/support/solutions/articles/50000012801-log-in-using-passkey",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r206",
+    "name": "New trend indicators for base metrics in Analytics",
+    "product": "Freshservice",
+    "excerpt": "You can now view trend changes for base module-level metrics, such as Tickets, Changes, or Problems directly within Freshservice Analytics.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r207",
+    "name": "Audit logs for Reader node in workflows",
+    "product": "Freshservice",
+    "excerpt": "Audit log coverage for the Reader node is now included for workflow automations.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r208",
+    "name": "Curated reports folders in Analytics",
+    "product": "Freshservice",
+    "excerpt": "Curated reports in Freshservice Analytics are now grouped together under respective folders, such as IT Service Management, Enterprise Service Management, IT Operations Management, and so on. This",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r209",
+    "name": "Data export enhancements in Analytics",
+    "product": "Freshservice",
+    "excerpt": "We have standardized column names to the English language for new columns in Analytics data export configurations.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r210",
+    "name": "Support for merged, spam, and deleted tickets in Analytics",
+    "product": "Freshservice",
+    "excerpt": "Enhance your data analysis by including spam, merged, and deleted tickets in your Analytics reports.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r211",
+    "name": "ID-based filtering in Analytics",
+    "product": "Freshservice",
+    "excerpt": "We’ve transitioned from string-based to ID-based querying for ‘Agent Group Name’ and ‘Service Identifier’ to improve platform performance and reliability in Freshservice Analytics.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r212",
+    "name": "Improved reports and widgets export in Analytics",
+    "product": "Freshservice",
+    "excerpt": "We’ve streamlined the export process for reports and widgets in Analytics to provide a more intuitive experience.",
+    "articleTitle": "",
+    "url": "",
+    "date": "2026-05-31",
+    "month": "2026-05"
+  },
+  {
+    "id": "r213",
+    "name": "Introducing AI Agent Studio in Freshservice for Business Teams\nResolve tickets faster with Copilot Resolution Insights\nAuto-save generated documents to Google Drive\nStandardizing request fulfillment with agent checklists \nNew trend indicators for base metrics in Analytics\nCurated reports folders in Analytics\nData export enhancements in Analytics\nSupport for merged, spam, and deleted tickets in Analytics\nID-based filtering in Analytics\nImproved reports and widgets export in Analytics",
+    "product": "Freshservice MSP/Teams",
+    "excerpt": "Refer to Service May Launches",
+    "articleTitle": "",
+    "url": "",
     "date": "2026-05-31",
     "month": "2026-05"
   },
@@ -983,4 +2063,4 @@ export const MONTHS = [
   }
 ]
 
-export const PRODUCTS = ["Freshchat", "Freshdesk", "Freshservice", "Freshservice MSP/Teams", "Omni"]
+export const PRODUCTS = ["Freddy AI", "Freshcaller", "Freshchat", "Freshdesk", "Freshservice", "Freshservice MSP/Teams", "Omni"]
