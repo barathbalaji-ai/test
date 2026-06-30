@@ -1,6 +1,6 @@
 // Articles: a dynamic "this month" lead built from the latest release data,
-// then an expandable archive driven by a film-reel timeline range-scroller
-// (with winding ambience) and an optional product filter.
+// then a big, inviting archive callout that opens a single-month timeline
+// scroller (with a focus-hunt blip) to step back through earlier months.
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageHeader from '../components/PageHeader.jsx'
@@ -32,7 +32,7 @@ function Lead({ latest }) {
               <li key={it.id} className="border-t border-chalk/20 pt-3">
                 <div className="font-mono text-[9px] uppercase tracking-widest text-chalk/40">{it.product}</div>
                 <div className="mt-1 font-display italic font-bold text-xl text-chalk leading-tight">{it.name}</div>
-                <p className="mt-1 text-sm text-chalk/60 line-clamp-2">{it.excerpt}</p>
+                {it.excerpt && <p className="mt-1 text-sm text-chalk/60 line-clamp-2">{it.excerpt}</p>}
               </li>
             ))}
           </ul>
@@ -56,10 +56,10 @@ function Grid({ list }) {
 
 export default function Articles() {
   const [expanded, setExpanded] = useState(false)
-  const [range, setRange] = useState({ from: LATEST, to: LATEST })
+  const [index, setIndex] = useState(LATEST)
   const [product, setProduct] = useState('All')
   const [muted, setMuted] = useState(false)
-  const { wind, setMuted: setSoundMuted } = useWinding()
+  const { tick, setMuted: setSoundMuted } = useWinding()
 
   const toggleMute = () => {
     const next = !muted
@@ -67,31 +67,25 @@ export default function Articles() {
     setSoundMuted(next)
   }
 
-  // Latest-month-only view vs. ranged archive view.
-  const inRange = (m) => {
-    const i = MONTHS.findIndex((x) => x.key === m)
-    return expanded ? i >= range.from && i <= range.to : i === LATEST
+  const openArchive = () => {
+    setExpanded(true)
+    setIndex(Math.max(0, LATEST - 1)) // jump straight to older content
+    if (!muted) tick()
   }
-  const filtered = useMemo(
-    () => ARTICLES.filter((a) => inRange(a.month) && (product === 'All' || a.product === product)),
-    [expanded, range, product]
+  const closeArchive = () => {
+    setExpanded(false)
+    setIndex(LATEST)
+  }
+
+  const shownKey = expanded ? MONTHS[index].key : MONTHS[LATEST].key
+  const shownLabel = expanded ? MONTHS[index].label : MONTHS[LATEST].label
+  const list = useMemo(
+    () => ARTICLES.filter((a) => a.month === shownKey && (product === 'All' || a.product === product)).sort(byDateDesc),
+    [shownKey, product]
   )
 
-  // Group by month, newest month first.
-  const groups = useMemo(() => {
-    const map = new Map()
-    for (const a of filtered) {
-      if (!map.has(a.month)) map.set(a.month, [])
-      map.get(a.month).push(a)
-    }
-    return [...map.entries()]
-      .sort((a, b) => (a[0] < b[0] ? 1 : -1))
-      .map(([key, items]) => ({
-        key,
-        label: MONTHS.find((m) => m.key === key)?.label || key,
-        items: items.sort(byDateDesc),
-      }))
-  }, [filtered])
+  const olderCount = ARTICLES.filter((a) => a.month !== MONTHS[LATEST].key).length
+  const span = `${MONTHS[0].label} – ${MONTHS[LATEST].label}`
 
   return (
     <div className="pb-12">
@@ -103,71 +97,80 @@ export default function Articles() {
         {['All', ...PRODUCTS].map((p) => (
           <button key={p} onClick={() => setProduct(p)} data-cursor="link" className={`tag ${product === p ? 'bg-ink text-chalk border-ink' : 'hover:border-ink'}`}>{p}</button>
         ))}
-        <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-stone">{filtered.length} article{filtered.length === 1 ? '' : 's'}</span>
       </div>
 
-      {/* Archive expander + timeline */}
-      <div className="mx-auto max-w-7xl px-6 mt-6">
-        <div className="flex items-center justify-between gap-4 border-t-2 border-ink pt-3">
-          <button
-            onClick={() => setExpanded((v) => !v)}
-            data-cursor="link"
-            className="font-mono text-[11px] uppercase tracking-widest text-ink hover:text-marker flex items-center gap-2"
+      {/* Archive timeline (only when opened) sits directly above the grid it drives */}
+      <AnimatePresence initial={false}>
+        {expanded && (
+          <motion.div
+            key="timeline"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.35, ease: 'easeInOut' }}
+            className="overflow-hidden"
           >
-            <motion.span animate={{ rotate: expanded ? 90 : 0 }} className="inline-block">▸</motion.span>
-            {expanded ? 'Showing the archive' : 'Open the archive — browse older months'}
-          </button>
-          {expanded && (
-            <button
-              onClick={toggleMute}
-              data-cursor="link"
-              className="font-mono text-[10px] uppercase tracking-widest text-stone hover:text-ink flex items-center gap-1.5"
-              aria-pressed={muted}
-            >
-              {muted ? '🔇 reel muted' : '🔊 reel sound'}
-            </button>
-          )}
-        </div>
-
-        <AnimatePresence initial={false}>
-          {expanded && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              className="overflow-hidden"
-            >
-              <div className="pt-6">
-                <Timeline
-                  months={MONTHS}
-                  from={range.from}
-                  to={range.to}
-                  onChange={setRange}
-                  onWind={(v) => !muted && wind(v)}
-                  onWindStop={() => {}}
-                />
+            <div className="mx-auto max-w-7xl px-6 mt-8">
+              <div className="bg-paper border-2 border-ink rounded-[4px] shadow-hard p-6 sm:p-8">
+                <div className="flex items-center justify-between mb-5">
+                  <span className="eyebrow text-oxblood">The archive · {span}</span>
+                  <div className="flex items-center gap-4">
+                    <button onClick={toggleMute} data-cursor="link" className="font-mono text-[10px] uppercase tracking-widest text-stone hover:text-ink" aria-pressed={muted}>
+                      {muted ? '🔇 sound off' : '🔊 sound on'}
+                    </button>
+                    <button onClick={closeArchive} data-cursor="link" className="font-mono text-[10px] uppercase tracking-widest text-stone hover:text-ink">
+                      ✕ back to this month
+                    </button>
+                  </div>
+                </div>
+                <Timeline months={MONTHS} index={index} onChange={setIndex} onStep={() => !muted && tick()} />
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Selected (or latest) month heading + grid */}
+      <div className="mx-auto max-w-7xl px-6 mt-8">
+        <div className="flex items-baseline gap-3 border-b border-ink/15 pb-2">
+          <h3 className="font-display italic font-black text-3xl tracking-tightest">{shownLabel}</h3>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-stone">{list.length} update{list.length === 1 ? '' : 's'}</span>
+        </div>
+        {list.length === 0
+          ? <p className="mt-6 font-hand text-2xl text-ink-soft">Nothing for this product in {shownLabel} — try another month or product.</p>
+          : <Grid list={list} />}
       </div>
 
-      {/* Article groups */}
-      <div className="mx-auto max-w-7xl px-6 mt-8">
-        {groups.length === 0 && (
-          <p className="font-hand text-2xl text-ink-soft">Nothing in this range — widen the reel or pick another product.</p>
+      {/* Big, inviting callout to open the archive (only when closed) */}
+      <AnimatePresence initial={false}>
+        {!expanded && (
+          <motion.div
+            key="callout"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            className="mx-auto max-w-7xl px-6 mt-14"
+          >
+            <motion.button
+              onClick={openArchive}
+              data-cursor="link"
+              whileHover={{ x: 4 }}
+              className="group w-full text-left bg-paper border-2 border-ink rounded-[4px] shadow-hard p-7 sm:p-9 flex flex-col sm:flex-row sm:items-center gap-5"
+            >
+              <span className="text-5xl sm:text-6xl leading-none" aria-hidden>🎞️</span>
+              <span className="flex-1">
+                <span className="block eyebrow text-oxblood">The archive · {span}</span>
+                <span className="block mt-1 font-display italic font-black text-3xl sm:text-4xl tracking-tightest text-ink">Wind back through earlier releases</span>
+                <span className="block mt-1 text-ink-soft">{olderCount} more articles waiting in {MONTHS.length - 1} earlier months.</span>
+              </span>
+              <span className="shrink-0 font-mono text-xs uppercase tracking-widest text-ink group-hover:text-marker flex items-center gap-2">
+                Open the timeline
+                <motion.span animate={{ x: [0, 5, 0] }} transition={{ repeat: Infinity, duration: 1.4 }}>▸</motion.span>
+              </span>
+            </motion.button>
+          </motion.div>
         )}
-        {groups.map((g) => (
-          <section key={g.key} className="mt-10 first:mt-0">
-            <div className="flex items-baseline gap-3 border-b border-ink/15 pb-2">
-              <h3 className="font-display italic font-black text-2xl tracking-tightest">{g.label}</h3>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-stone">{g.items.length} update{g.items.length === 1 ? '' : 's'}</span>
-            </div>
-            <Grid list={g.items} />
-          </section>
-        ))}
-      </div>
+      </AnimatePresence>
     </div>
   )
 }
