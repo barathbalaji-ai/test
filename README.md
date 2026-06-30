@@ -8,8 +8,10 @@ highlighter marks, hand-drawn annotations, film grain, a retro pixel cursor and 
 reactive stipple-brain hero — wrapped around a genuinely functional toolset.
 
 Built with **React 18 + Vite 5 + Tailwind CSS 3 + Framer Motion 11 + React Router 6**
-(HashRouter, so it works on any static host). **No backend** — everything persists in
-the browser via `localStorage`, so it deploys free and can later be wired to a real DB.
+(HashRouter, so it works on any static host). Shared data (forms, quiz responses,
+calendar sessions, completions, the learner roster) is stored in **Vercel Postgres**
+via serverless functions under `/api`; when no backend is configured the app falls
+back to per-browser `localStorage`, so local dev and static-only deploys still work.
 
 ---
 
@@ -20,7 +22,7 @@ the browser via `localStorage`, so it deploys free and can later be wired to a r
 | **Home** | `/` | Editorial hero (stipple brain), five-rooms map, featured courses, philosophy, poster of the week. |
 | **Courses** | `/courses` | Filterable/searchable library. Click a course → opens its **Google Drive** lesson in a new tab **and** a checkpoint flow. |
 | **Posters** | `/posters` | Print-ready poster wall + lightbox (generative fallback when no image). |
-| **Articles** | `/articles` | This month's launches lead + a string-tie folder feed of release notes. |
+| **Articles** | `/articles` | Latest month's release notes; expand the archive to wind a film-reel **timeline range-scroller** (with reeling ambience) across older months. |
 | **Calendar** | `/calendar` | Month grid + agenda of in-person sessions; product/type filters; tutors can add sessions. |
 | **Quiz Studio** | `/studio` | *(tutor)* Build forms, graded quizzes, branching decision trees; view responses. |
 | **Analytics** | `/analytics` | *(tutor/admin)* Swiss dashboard of completions, scores and survey results. |
@@ -64,14 +66,64 @@ npm run preview  # preview the build
   Google Drive share URL (and tune the checkpoint `quiz` questions).
 - **Posters:** drop artwork into `public/posters/` and point each `img` in
   `src/data/content.js` at it (≤~250 KB web JPGs). Missing images fall back to a motif.
-- **Articles:** `src/data/articles.js` → replace the placeholder `url`s with real
-  support-portal links.
+- **Articles:** `src/data/articles.js` is **generated from the team's Site Content
+  sheet** (Feature Releases). Each row that has *both* a description and an article
+  link is kept (rows missing either are skipped); columns map Product → `product`,
+  Feature → `name`, Description → `excerpt`, Release month → `date`/`month`, and the
+  article hyperlink → `url`. The page shows the latest month by default and exposes
+  the rest through the timeline scroller. Re-run the import to refresh.
 - **Calendar:** seed sessions live in `SEED_EVENTS` (`src/data/content.js`).
 - **Clippings:** optional transparent torn-paper PNGs at `public/clippings/clip-1..3.png`;
   otherwise a drawn newsprint fallback renders.
-- **Persistence:** swap `src/lib/store.js` for API/DB calls to make data multi-user.
+- **Persistence:** shared data already goes through the `/api` functions backed by
+  Vercel Postgres (see below). `src/lib/store.js` is the single sync layer.
 
-Use **Reset demo data** in the Studio to restore the seeded forms.
+Use **Reset demo data** in the Studio to re-pull from the backend (or restore local
+seeds when running without one).
+
+## Shared database (Vercel Postgres)
+
+The portal syncs through serverless functions in `/api`, backed by a Postgres
+database. Everything is optimistic: the UI updates instantly and writes sync in the
+background; if the API is unreachable it transparently falls back to `localStorage`.
+
+**Endpoints**
+
+| Route | Methods | Purpose |
+|-------|---------|---------|
+| `/api/state` | `GET` | The whole shared store: forms, responses, events, completions, users. |
+| `/api/forms` | `POST`, `DELETE?id=` | Save / delete a form, quiz or decision tree. |
+| `/api/responses` | `POST` | Record a form/quiz/tree response. |
+| `/api/events` | `POST`, `DELETE?id=` | Create / delete a calendar session. |
+| `/api/completions` | `POST` | Record a learner's course completion + score. |
+| `/api/users` | `GET`, `POST` | The learner/tutor roster for analytics (no passwords). |
+
+The schema is created and seeded automatically on first request
+(`api/_db.js` → `ensureSchema()`).
+
+**Set it up on Vercel (one time)**
+
+1. Import the repo into Vercel (it auto-detects Vite + the `/api` functions).
+2. In the project, go to **Storage → Create Database → Postgres** (Neon) and connect
+   it. Vercel injects `POSTGRES_URL` (and friends) into the project's env vars.
+3. **Redeploy.** The first request to any `/api/*` route creates the tables and seeds
+   the demo forms + sessions. Done — data is now shared across all users.
+
+**Local development with the database**
+
+```bash
+npm i -g vercel
+vercel link            # link to the Vercel project
+vercel env pull .env.local   # fetch POSTGRES_URL locally
+vercel dev             # runs the SPA + /api functions together
+```
+
+`npm run dev` (plain Vite) also works — it just runs in `localStorage` fallback mode
+because the `/api` functions aren't served.
+
+> **Identity note:** passwords are still the client-side sample auth. The roster in
+> the `users` table carries no passwords. Move to Google Sign-In (verified
+> server-side) for real authentication — see `CARTA_BLUEPRINT.md` §12.
 
 ## Deploy
 

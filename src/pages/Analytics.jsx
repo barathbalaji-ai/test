@@ -2,7 +2,6 @@
 import PageHeader from '../components/PageHeader.jsx'
 import { Reveal } from '../components/Reveal.jsx'
 import { useStore } from '../lib/store.js'
-import { listUsers } from '../lib/auth.jsx'
 import { COURSES } from '../data/courses.js'
 
 const TYPE_LABEL = { form: 'Form', quiz: 'Quiz', tree: 'Tree' }
@@ -21,7 +20,8 @@ export default function Analytics() {
   const completions = useStore((s) => s.completions)
   const responses = useStore((s) => s.responses)
   const forms = useStore((s) => s.forms)
-  const learners = listUsers().filter((u) => u.role === 'learner')
+  const users = useStore((s) => s.users) || []
+  const learners = users.filter((u) => u.role === 'learner')
 
   // Flatten completions: [{email, courseId, score}]
   const allCompletions = []
@@ -139,7 +139,7 @@ export default function Analytics() {
             <div className="mt-4 space-y-2">
               {active.length === 0 && <p className="text-ink-soft font-hand text-xl">No activity yet — completions will show here.</p>}
               {active.map(([email, n], i) => {
-                const u = listUsers().find((x) => x.email === email)
+                const u = users.find((x) => x.email === email)
                 return (
                   <div key={email} className="flex items-center justify-between border-b border-ink/10 py-2">
                     <span className="flex items-center gap-3">
