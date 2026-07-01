@@ -3,18 +3,21 @@
 // ---- Posters --------------------------------------------------------------
 // Drop real artwork into public/posters/ and set `img` to e.g. '/posters/chat-etiquette.jpg'.
 // Cards without an image render a generative motif fallback (see PosterCard).
+// `guide` (a PDF path) marks a poster as a full multi-page guide: clicking it
+// opens the whole document in the viewer rather than a single image.
 export const POSTERS = [
   { id: 'check-calendar', title: 'Check Your Calendar', category: 'Mindset', caption: 'Meeting etiquette in black and white — respond Yes/No and show up ready.', img: '/posters/check-calendar.jpg' },
   { id: 'punctuality', title: 'Punctuality', category: 'Mindset', caption: 'The first deliverable — after all, the early bird gets the worm.', img: '/posters/punctuality.jpg' },
   { id: 'missing-agent', title: 'The Missing Agent', category: 'Mindset', caption: 'A detective-board look at what goes missing on a call.', img: '/posters/missing-agent.jpg' },
-  { id: 'on-time-is-late', title: 'On Time Is Late', category: 'Mindset', caption: "Get on your call early — set up for a smooth start.", img: '/posters/on-time-is-late.jpg' },
+  { id: 'on-time-is-late', title: 'On Time Is Late', category: 'Mindset', caption: 'Get on your call early — set up for a smooth start.', img: '/posters/on-time-is-late.jpg' },
   { id: 'make-notes', title: 'Make Notes', category: 'Craft', caption: 'Document the call — or let AI assist with the MoM.', img: '/posters/make-notes.jpg' },
   { id: 'chat-etiquette', title: 'Chat Etiquette', category: 'Craft', caption: 'Small habits that make a chat feel human.', img: '/posters/chat-etiquette.jpg' },
   { id: 'ai-guidelines', title: 'AI Guidelines', category: 'Communication', caption: 'Using AI with care in your support journey.', img: '/posters/ai-guidelines.jpg' },
-  { id: 'i-belong', title: 'I Belong', category: 'Mindset', caption: 'A personal playbook for influence & impact.', img: '/posters/i-belong.jpg' },
+  { id: 'i-belong', title: 'I Belong', category: 'Guides', caption: 'A personal playbook for influence & impact — open to read the full guide.', img: '/posters/i-belong.jpg', guide: '/guides/i-belong.pdf' },
+  { id: 'q1-playbook', title: 'Q1 Programs Playbook', category: 'Guides', caption: 'The full Q1 enablement programs playbook.', img: '/posters/q1-playbook.jpg', guide: '/guides/q1-programs-playbook.pdf' },
 ]
 
-export const POSTER_CATEGORIES = ['All', 'Craft', 'Mindset', 'Communication']
+export const POSTER_CATEGORIES = ['All', 'Craft', 'Mindset', 'Communication', 'Guides']
 
 // ---- Calendar sessions ----------------------------------------------------
 export const SESSION_TYPES = [

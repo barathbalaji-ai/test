@@ -4,8 +4,8 @@
 
 export const PRODUCTS = [
   { id: 'all', name: 'All products', color: '#1A1712' },
-  { id: 'freshdesk', name: 'Freshdesk', color: '#1F6FEB' },
-  { id: 'freshservice', name: 'Freshservice', color: '#0E8F6E' },
+  { id: 'freshdesk', name: 'Freshdesk', color: '#0E8F6E' },
+  { id: 'freshservice', name: 'Freshservice', color: '#1F6FEB' },
   { id: 'freshchat', name: 'Freshchat', color: '#7A3FF2' },
   { id: 'freshcaller', name: 'Freshcaller', color: '#C2410C' },
   { id: 'freshsales', name: 'Freshsales', color: '#B91C5C' },
