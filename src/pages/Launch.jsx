@@ -21,7 +21,7 @@ export default function Launch() {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-paper flex flex-col">
       {/* faint brain on the right, decorative */}
-      <div className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[55%] max-w-3xl opacity-[0.12] hidden lg:block">
+      <div className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[55%] max-w-3xl h-[80vh] opacity-[0.14] hidden lg:block">
         <StippleBrain />
       </div>
 
