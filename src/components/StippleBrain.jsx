@@ -29,7 +29,7 @@ export default function StippleBrain() {
       {/* wrapper carries the pointer parallax; the image carries its own float */}
       <div ref={ref} className="absolute inset-0 will-change-transform" style={{ transition: 'transform 0.25s ease-out' }}>
         <motion.img
-          src="/stipple_brain.png"
+          src="/stipple_brain.webp"
           alt="Cerebra — a cortical study"
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
