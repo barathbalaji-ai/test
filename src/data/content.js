@@ -3,8 +3,8 @@
 // ---- Posters --------------------------------------------------------------
 // Drop real artwork into public/posters/ and set `img` to e.g. '/posters/chat-etiquette.jpg'.
 // Cards without an image render a generative motif fallback (see PosterCard).
-// `guide` (a PDF path) marks a poster as a full multi-page guide: clicking it
-// opens the whole document in the viewer rather than a single image.
+// The posters bound into the Support Codex book. (I Belong and the Q1 Programs
+// playbook are their own books — see src/data/books.js.)
 export const POSTERS = [
   { id: 'check-calendar', title: 'Check Your Calendar', category: 'Mindset', caption: 'Meeting etiquette in black and white — respond Yes/No and show up ready.', img: '/posters/check-calendar.jpg' },
   { id: 'punctuality', title: 'Punctuality', category: 'Mindset', caption: 'The first deliverable — after all, the early bird gets the worm.', img: '/posters/punctuality.jpg' },
@@ -13,11 +13,9 @@ export const POSTERS = [
   { id: 'make-notes', title: 'Make Notes', category: 'Craft', caption: 'Document the call — or let AI assist with the MoM.', img: '/posters/make-notes.jpg' },
   { id: 'chat-etiquette', title: 'Chat Etiquette', category: 'Craft', caption: 'Small habits that make a chat feel human.', img: '/posters/chat-etiquette.jpg' },
   { id: 'ai-guidelines', title: 'AI Guidelines', category: 'Communication', caption: 'Using AI with care in your support journey.', img: '/posters/ai-guidelines.jpg' },
-  { id: 'i-belong', title: 'I Belong', category: 'Guides', caption: 'A personal playbook for influence & impact — open to read the full guide.', img: '/posters/i-belong.jpg', guide: '/guides/i-belong.pdf' },
-  { id: 'q1-playbook', title: 'Q1 Programs Playbook', category: 'Guides', caption: 'The full Q1 enablement programs playbook.', img: '/posters/q1-playbook.jpg', guide: '/guides/q1-programs-playbook.pdf' },
 ]
 
-export const POSTER_CATEGORIES = ['All', 'Craft', 'Mindset', 'Communication', 'Guides']
+export const POSTER_CATEGORIES = ['All', 'Craft', 'Mindset', 'Communication']
 
 // ---- Calendar sessions ----------------------------------------------------
 export const SESSION_TYPES = [
