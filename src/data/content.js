@@ -4,54 +4,14 @@
 // Drop real artwork into public/posters/ and set `img` to e.g. '/posters/chat-etiquette.jpg'.
 // Cards without an image render a generative motif fallback (see PosterCard).
 export const POSTERS = [
-  {
-    id: 'chat-etiquette',
-    title: 'Chat Etiquette',
-    category: 'Craft',
-    kind: 'bookmark',
-    caption: 'Small habits that make a chat feel human.',
-    img: '/posters/chat-etiquette.jpg',
-  },
-  {
-    id: 'i-belong',
-    title: 'I Belong',
-    category: 'Mindset',
-    kind: 'guidebook',
-    caption: 'A Personal Playbook for Influence & Impact.',
-    img: '/posters/i-belong.jpg',
-  },
-  {
-    id: 'check-your-calendar',
-    title: 'Check Your Calendar',
-    category: 'Mindset',
-    kind: 'black',
-    caption: 'Meeting etiquette, in black and white.',
-    img: '/posters/check-your-calendar.jpg',
-  },
-  {
-    id: 'punctuality',
-    title: 'Punctuality',
-    category: 'Mindset',
-    kind: 'illustration',
-    caption: 'Is the first deliverable.',
-    img: '/posters/punctuality.jpg',
-  },
-  {
-    id: 'the-missing-agent',
-    title: 'The Missing Agent',
-    category: 'Mindset',
-    kind: 'detective',
-    caption: 'A detective-board look at what goes missing.',
-    img: '/posters/the-missing-agent.jpg',
-  },
-  {
-    id: 'ai-guidelines',
-    title: 'AI Guidelines',
-    category: 'Communication',
-    kind: 'rules',
-    caption: 'Five rules for using AI with care.',
-    img: '/posters/ai-guidelines.jpg',
-  },
+  { id: 'check-calendar', title: 'Check Your Calendar', category: 'Mindset', caption: 'Meeting etiquette in black and white — respond Yes/No and show up ready.', img: '/posters/check-calendar.jpg' },
+  { id: 'punctuality', title: 'Punctuality', category: 'Mindset', caption: 'The first deliverable — after all, the early bird gets the worm.', img: '/posters/punctuality.jpg' },
+  { id: 'missing-agent', title: 'The Missing Agent', category: 'Mindset', caption: 'A detective-board look at what goes missing on a call.', img: '/posters/missing-agent.jpg' },
+  { id: 'on-time-is-late', title: 'On Time Is Late', category: 'Mindset', caption: "Get on your call early — set up for a smooth start.", img: '/posters/on-time-is-late.jpg' },
+  { id: 'make-notes', title: 'Make Notes', category: 'Craft', caption: 'Document the call — or let AI assist with the MoM.', img: '/posters/make-notes.jpg' },
+  { id: 'chat-etiquette', title: 'Chat Etiquette', category: 'Craft', caption: 'Small habits that make a chat feel human.', img: '/posters/chat-etiquette.jpg' },
+  { id: 'ai-guidelines', title: 'AI Guidelines', category: 'Communication', caption: 'Using AI with care in your support journey.', img: '/posters/ai-guidelines.jpg' },
+  { id: 'i-belong', title: 'I Belong', category: 'Mindset', caption: 'A personal playbook for influence & impact.', img: '/posters/i-belong.jpg' },
 ]
 
 export const POSTER_CATEGORIES = ['All', 'Craft', 'Mindset', 'Communication']

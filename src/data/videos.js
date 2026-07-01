@@ -24,12 +24,26 @@ const RAW = [
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
-export const VIDEOS = RAW.map((v) => ({
-  id: slug(v.title),
-  title: v.title,
-  blurb: v.desc,
-  productLabel: v.product,
-  productIds: matchProducts(v.product),
-  link: v.link,
-  thumbnail: '', // drop an image path/URL here (or via the sheet) when ready
-}))
+// Thumbnails present in public/thumbnails/, keyed by course id. Courses without
+// one fall back to a titled tile. Add more here (or via the Videos sheet) as
+// artwork arrives.
+const THUMBS = {
+  'intro-to-model-context-protocol': '/thumbnails/intro-to-mcp.jpg',
+  'ai-recommendations-app': '/thumbnails/ai-recommendations-app.jpg',
+  'guidelines-for-ai-usage': '/thumbnails/guidelines-for-ai.jpg',
+  'meeting-etiquettes': '/thumbnails/meeting-etiquettes.jpg',
+  'time-management': '/thumbnails/time-management.jpg',
+}
+
+export const VIDEOS = RAW.map((v) => {
+  const id = slug(v.title)
+  return {
+    id,
+    title: v.title,
+    blurb: v.desc,
+    productLabel: v.product,
+    productIds: matchProducts(v.product),
+    link: v.link,
+    thumbnail: THUMBS[id] || '',
+  }
+})
