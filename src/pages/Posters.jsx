@@ -1,10 +1,16 @@
-// Poster wall + lightbox.
-import { useState } from 'react'
+// Posters — a lazy-susan carousel you spin through, plus a lightbox. Content
+// comes from the Posters sheet when configured, otherwise the bundled seed
+// (which points at artwork in public/posters/).
+import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageHeader from '../components/PageHeader.jsx'
-import { Reveal } from '../components/Reveal.jsx'
-import PosterCard, { PosterMotif } from '../components/PosterCard.jsx'
-import { POSTERS, POSTER_CATEGORIES } from '../data/content.js'
+import PosterCarousel from '../components/PosterCarousel.jsx'
+import { PosterMotif } from '../components/PosterCard.jsx'
+import { POSTERS } from '../data/content.js'
+import { SOURCES } from '../config/sources.js'
+import { useSheet, pick } from '../lib/sheets.js'
+
+const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
 function Lightbox({ poster, onClose }) {
   return (
@@ -17,10 +23,9 @@ function Lightbox({ poster, onClose }) {
         className="relative grid md:grid-cols-[1.3fr_1fr] gap-0 w-full max-w-4xl bg-chalk rounded-[4px] overflow-hidden shadow-hard border border-ink/20 max-h-[90vh]"
       >
         <div className="relative min-h-[40vh] md:min-h-[70vh] bg-ink">
-          {poster.img ? (
-            <img src={poster.img} alt={poster.title} className="absolute inset-0 w-full h-full object-contain" onError={(e) => { e.currentTarget.style.display = 'none' }} />
-          ) : null}
-          {!poster.img && <PosterMotif poster={poster} />}
+          {poster.img
+            ? <img src={poster.img} alt={poster.title} className="absolute inset-0 w-full h-full object-contain" onError={(e) => { e.currentTarget.style.display = 'none' }} />
+            : <PosterMotif poster={poster} />}
         </div>
         <div className="p-7 flex flex-col">
           <button onClick={onClose} className="self-end text-ink-soft hover:text-marker" data-cursor="link">✕</button>
@@ -28,7 +33,7 @@ function Lightbox({ poster, onClose }) {
           <h2 className="mt-1 font-display italic font-bold text-3xl tracking-tightest">{poster.title}</h2>
           <p className="mt-3 text-ink-soft">{poster.caption}</p>
           <div className="mt-auto flex gap-3 pt-6">
-            <a href={poster.img || '#'} download className="btn-ink" data-cursor="link">↓ Download</a>
+            {poster.img && <a href={poster.img} download className="btn-ink" data-cursor="link">↓ Download</a>}
             <button onClick={() => window.print()} className="btn-ghost" data-cursor="link">Print</button>
           </div>
         </div>
@@ -38,25 +43,41 @@ function Lightbox({ poster, onClose }) {
 }
 
 export default function Posters() {
+  const { data: posters } = useSheet(
+    SOURCES.posters,
+    (r) => {
+      const title = pick(r, 'title', 'name')
+      if (!title) return null
+      return {
+        id: slug(title),
+        title,
+        category: pick(r, 'category', 'topic', 'products') || 'Craft',
+        caption: pick(r, 'description', 'caption', 'desc'),
+        img: pick(r, 'image', 'img', 'thumbnail', 'artwork'),
+      }
+    },
+    POSTERS,
+  )
+
+  const cats = useMemo(() => ['All', ...new Set(posters.map((p) => p.category).filter(Boolean))], [posters])
   const [cat, setCat] = useState('All')
   const [active, setActive] = useState(null)
-  const list = POSTERS.filter((p) => cat === 'All' || p.category === cat)
+  const list = posters.filter((p) => cat === 'All' || p.category === cat)
 
   return (
-    <div className="pb-10">
-      <PageHeader kicker="The wall" title="Posters" intro="Print-ready reminders for the team room. Click any poster to enlarge, download or print." />
-      <div className="mx-auto max-w-7xl px-6 flex flex-wrap gap-2">
-        {POSTER_CATEGORIES.map((c) => (
+    <div className="pb-16">
+      <PageHeader kicker="The wall" title="Posters" intro="Spin the turntable to browse print-ready reminders for the team room. Click the front poster to enlarge, download or print." />
+
+      <div className="mx-auto max-w-7xl px-6 flex flex-wrap gap-2 justify-center">
+        {cats.map((c) => (
           <button key={c} onClick={() => setCat(c)} data-cursor="link" className={`tag ${cat === c ? 'bg-ink text-chalk border-ink' : 'hover:border-ink'}`}>{c}</button>
         ))}
       </div>
-      <div className="mx-auto max-w-7xl px-6 mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((p, i) => (
-          <Reveal key={p.id} delay={i * 0.05}>
-            <PosterCard poster={p} onOpen={setActive} />
-          </Reveal>
-        ))}
+
+      <div className="mx-auto max-w-5xl px-6 mt-10">
+        <PosterCarousel key={cat} posters={list} onOpen={setActive} />
       </div>
+
       <AnimatePresence>{active && <Lightbox poster={active} onClose={() => setActive(null)} />}</AnimatePresence>
     </div>
   )

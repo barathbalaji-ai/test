@@ -1,15 +1,16 @@
-// A synthesized "film-reel winding" ambience for the Articles timeline.
-// No audio files — everything is generated with the Web Audio API so it works
-// offline and adds zero asset weight. Call `wind(intensity)` repeatedly while
-// the timeline is being scrubbed; it ramps a mechanical whirr + ratchet up with
-// the scrub speed and decays to silence shortly after movement stops.
+// A short "lens hunting for focus" blip for the Articles timeline — call
+// `tick()` once each time the selected month changes. Each tick is a brief
+// servo whir that hunts up in pitch and settles, with a soft focus "clack" at
+// the onset (think autofocus stepping, or a fishing-reel click). It's
+// synthesized with the Web Audio API — no asset files — and every call spins up
+// short-lived nodes, so there is no continuous drone.
 //
 // Browsers only allow audio after a user gesture, so the AudioContext is created
-// lazily on the first `wind()` call (which always originates from a drag/scroll).
+// lazily on the first `tick()` (which always originates from a drag/click/keypress).
 import { useCallback, useEffect, useRef } from 'react'
 
 export function useWinding() {
-  const ref = useRef({ ctx: null, muted: false, decay: 0 })
+  const ref = useRef({ ctx: null, master: null, muted: false, seed: 0 })
 
   const ensure = useCallback(() => {
     const s = ref.current
@@ -17,95 +18,76 @@ export function useWinding() {
     const AC = typeof window !== 'undefined' && (window.AudioContext || window.webkitAudioContext)
     if (!AC) return null
     const ctx = new AC()
-
     const master = ctx.createGain()
-    master.gain.value = 0.0001
+    master.gain.value = 0.9
     master.connect(ctx.destination)
-
-    // Voicing chain: a low sawtooth "motor" gated by a square LFO (the ratchet
-    // clicks), softened through a lowpass.
-    const lp = ctx.createBiquadFilter()
-    lp.type = 'lowpass'
-    lp.frequency.value = 1100
-    lp.Q.value = 6
-    lp.connect(master)
-
-    const ratchet = ctx.createGain()
-    ratchet.gain.value = 0.6
-    ratchet.connect(lp)
-
-    const motor = ctx.createOscillator()
-    motor.type = 'sawtooth'
-    motor.frequency.value = 70
-    motor.connect(ratchet)
-
-    const lfo = ctx.createOscillator()
-    lfo.type = 'square'
-    lfo.frequency.value = 16
-    const lfoGain = ctx.createGain()
-    lfoGain.gain.value = 0.5
-    lfo.connect(lfoGain)
-    lfoGain.connect(ratchet.gain)
-
-    // A breath of filtered noise = the tape/air hiss of the reel.
-    const len = Math.floor(ctx.sampleRate * 0.5)
-    const buf = ctx.createBuffer(1, len, ctx.sampleRate)
-    const data = buf.getChannelData(0)
-    for (let i = 0; i < len; i++) data[i] = (Math.random() * 2 - 1) * 0.5
-    const noise = ctx.createBufferSource()
-    noise.buffer = buf
-    noise.loop = true
-    const nf = ctx.createBiquadFilter()
-    nf.type = 'bandpass'
-    nf.frequency.value = 1400
-    nf.Q.value = 0.7
-    const ng = ctx.createGain()
-    ng.gain.value = 0.18
-    noise.connect(nf)
-    nf.connect(ng)
-    ng.connect(master)
-
-    motor.start()
-    lfo.start()
-    noise.start()
-
-    Object.assign(s, { ctx, master, motor, lfo, nf })
+    Object.assign(s, { ctx, master })
     return s
   }, [])
 
-  const wind = useCallback((intensity = 0.5) => {
+  const tick = useCallback((strength = 1) => {
     const s = ensure()
     if (!s || s.muted) return
-    const { ctx, master, motor, lfo, nf } = s
+    const { ctx, master } = s
     if (ctx.state === 'suspended') ctx.resume()
-    const v = Math.max(0, Math.min(1, intensity))
     const t = ctx.currentTime
-    master.gain.setTargetAtTime(0.04 + 0.07 * v, t, 0.02)
-    motor.frequency.setTargetAtTime(58 + v * 210, t, 0.03)
-    lfo.frequency.setTargetAtTime(9 + v * 34, t, 0.03) // faster ratchet = faster wind
-    nf.frequency.setTargetAtTime(800 + v * 1700, t, 0.05)
-    clearTimeout(s.decay)
-    s.decay = setTimeout(() => {
-      master.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.09)
-    }, 100)
+    s.seed = (s.seed + 1) % 1000
+    const jitter = ((s.seed * 37) % 50) - 25 // deterministic wobble (no Math.random needed)
+    const v = Math.max(0.35, Math.min(1, strength))
+
+    // Servo whir: a soft triangle that hunts up then settles back — the
+    // "searching for focus" glide.
+    const osc = ctx.createOscillator()
+    osc.type = 'triangle'
+    const g = ctx.createGain()
+    const lp = ctx.createBiquadFilter()
+    lp.type = 'lowpass'
+    lp.frequency.value = 2400
+    lp.Q.value = 0.6
+    osc.connect(g)
+    g.connect(lp)
+    lp.connect(master)
+
+    const base = 250 + jitter
+    osc.frequency.setValueAtTime(base, t)
+    osc.frequency.exponentialRampToValueAtTime(base * 2.1, t + 0.05) // hunt up
+    osc.frequency.exponentialRampToValueAtTime(base * 1.35, t + 0.15) // settle
+    g.gain.setValueAtTime(0.0001, t)
+    g.gain.exponentialRampToValueAtTime(0.09 * v, t + 0.012) // quick attack
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.18) // decay
+    osc.start(t)
+    osc.stop(t + 0.2)
+
+    // Focus "clack": a tiny filtered click at the onset.
+    const len = Math.floor(ctx.sampleRate * 0.03)
+    const buf = ctx.createBuffer(1, len, ctx.sampleRate)
+    const data = buf.getChannelData(0)
+    for (let i = 0; i < len; i++) data[i] = (((i * 73 + s.seed) % 101) / 50 - 1) * (1 - i / len)
+    const click = ctx.createBufferSource()
+    click.buffer = buf
+    const bp = ctx.createBiquadFilter()
+    bp.type = 'bandpass'
+    bp.frequency.value = 1700
+    bp.Q.value = 1.2
+    const cg = ctx.createGain()
+    cg.gain.value = 0.06 * v
+    click.connect(bp)
+    bp.connect(cg)
+    cg.connect(master)
+    click.start(t)
+    click.stop(t + 0.04)
   }, [ensure])
 
   const setMuted = useCallback((m) => {
-    const s = ref.current
-    s.muted = m
-    if (m && s.master && s.ctx) {
-      clearTimeout(s.decay)
-      s.master.gain.setTargetAtTime(0.0001, s.ctx.currentTime, 0.05)
-    }
+    ref.current.muted = m
   }, [])
 
   useEffect(() => {
     const s = ref.current
     return () => {
-      clearTimeout(s.decay)
       if (s.ctx) s.ctx.close().catch(() => {})
     }
   }, [])
 
-  return { wind, setMuted }
+  return { tick, setMuted }
 }
