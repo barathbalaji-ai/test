@@ -4,7 +4,7 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import PageHeader from '../components/PageHeader.jsx'
-import PosterCarousel from '../components/PosterCarousel.jsx'
+import PosterBook from '../components/PosterBook.jsx'
 import { PosterMotif } from '../components/PosterCard.jsx'
 import { POSTERS } from '../data/content.js'
 import { SOURCES } from '../config/sources.js'
@@ -87,7 +87,7 @@ export default function Posters() {
 
   return (
     <div className="pb-16">
-      <PageHeader kicker="The wall" title="Posters" intro="Spin the turntable to browse print-ready reminders for the team room. Click the front poster to enlarge — or open a full guide." />
+      <PageHeader kicker="The wall" title="Posters" intro="Turn the pages of the poster book — each spread is a print-ready reminder for the team room. Click a poster to enlarge, or open a full guide." />
 
       <div className="mx-auto max-w-7xl px-6 flex flex-wrap gap-2 justify-center">
         {cats.map((c) => (
@@ -96,7 +96,7 @@ export default function Posters() {
       </div>
 
       <div className="mx-auto max-w-5xl px-6 mt-10">
-        <PosterCarousel key={cat} posters={list} onOpen={setActive} />
+        <PosterBook key={cat} posters={list} onOpen={setActive} />
       </div>
 
       <AnimatePresence>{active && <Lightbox poster={active} onClose={() => setActive(null)} />}</AnimatePresence>
