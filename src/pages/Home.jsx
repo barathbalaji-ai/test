@@ -21,7 +21,7 @@ const ROOMS = [
 function Hero() {
   return (
     <section className="relative mx-auto max-w-7xl px-6 pt-12 pb-16 min-h-[78vh]">
-      <div className="absolute top-6 bottom-6 right-0 w-[48%] hidden lg:block">
+      <div className="absolute -top-6 bottom-0 -right-[6%] w-[62%] hidden lg:block pointer-events-none">
         <StippleBrain />
       </div>
 
