@@ -6,7 +6,8 @@
   "description": "Carta — an editorial, motion-driven learning portal for Customer Support teams.",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run build:universe",
+    "build:universe": "cd lexica && npm install --no-audit --no-fund && LEXICA_BASE=/universe/ npm run build && cd .. && rm -rf dist/universe && cp -r lexica/dist dist/universe",
     "preview": "vite preview"
   },
   "dependencies": {

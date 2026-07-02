@@ -5,10 +5,17 @@ import { loadState, saveState } from '../lib/persist.js'
 
 // Client-side domain gate, carried over from the previous site. It filters
 // honest traffic; it is not a security boundary.
+// Skipped when embedded inside another origin's page (e.g. the Carta
+// "Explore the Supportverse" popup) — that host already gated the visitor,
+// so asking again here would just be a redundant second login.
+const isEmbedded = () => {
+  try { return window.self !== window.top } catch { return true }
+}
+
 export default function LaunchGate({ children }) {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
-  const [open, setOpen] = useState(() => !loadState().gateEmail)
+  const [open, setOpen] = useState(() => !isEmbedded() && !loadState().gateEmail)
 
   const submit = (e) => {
     e.preventDefault()

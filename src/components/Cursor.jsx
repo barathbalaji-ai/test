@@ -1,6 +1,7 @@
 // Retro pixel-art arrow cursor. Follows the pointer SMOOTHLY via rAF (not 12fps).
 // Swells / turns red over interactive elements. Disabled on touch / coarse pointers.
 import { useEffect, useRef } from 'react'
+import { isMotionPaused } from '../lib/motionPause.js'
 
 const ARROW =
   "data:image/svg+xml;utf8," +
@@ -35,6 +36,7 @@ export default function Cursor() {
 
     let raf
     const loop = () => {
+      if (isMotionPaused()) { raf = requestAnimationFrame(loop); return }
       // Smooth follow (lerp).
       pos.current.x += (target.current.x - pos.current.x) * 0.28
       pos.current.y += (target.current.y - pos.current.y) * 0.28

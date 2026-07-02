@@ -3,6 +3,7 @@
 // light layer of ink particles that drift off the brain and fade into the paper.
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { isMotionPaused } from '../lib/motionPause.js'
 
 const INK = '26,23,18'
 
@@ -67,6 +68,7 @@ export default function StippleBrain() {
     let last = 0
     const tick = (t) => {
       raf = requestAnimationFrame(tick)
+      if (isMotionPaused()) { last = t; return }
       const dt = last ? Math.min((t - last) / 1000, 0.05) : 0.016
       last = t
       ctx.clearRect(0, 0, w, h)
