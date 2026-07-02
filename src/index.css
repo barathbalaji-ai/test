@@ -70,6 +70,16 @@
     transform: none;
   }
 
+  /* Outline button for dark (section-dark) contexts */
+  .btn-outline-chalk {
+    @apply inline-flex items-center gap-2 bg-transparent text-chalk font-mono text-xs uppercase tracking-widest px-5 py-3 rounded-[3px] border border-chalk/40 transition-all duration-150;
+  }
+  .btn-outline-chalk:hover {
+    @apply border-chalk;
+    box-shadow: 5px 6px 0 rgba(255,255,255,0.15);
+    transform: translate(-1px, -1px);
+  }
+
   /* Mono uppercase pill tag */
   .tag {
     @apply inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-[3px] border border-ink/30 text-ink-soft;

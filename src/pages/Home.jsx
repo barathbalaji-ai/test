@@ -1,11 +1,13 @@
 // Home — editorial hero with the stipple brain, a "rooms" grid, featured
 // courses, a philosophy block, and poster of the week.
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import StippleBrain from '../components/StippleBrain.jsx'
 import { Circle, Underline, Squiggle } from '../components/HandDrawn.jsx'
 import { Reveal, RevealWords } from '../components/Reveal.jsx'
 import Highlight from '../components/Highlight.jsx'
+import SupportverseModal from '../components/SupportverseModal.jsx'
 import { VIDEOS } from '../data/videos.js'
 import { productById } from '../data/taxonomy.js'
 import { POSTERS } from '../data/content.js'
@@ -51,6 +53,30 @@ function Hero() {
           <Link to="/videos" className="btn-ink" data-cursor="link">Browse the library</Link>
           <Link to="/calendar" className="btn-ghost" data-cursor="link">See live training</Link>
         </div>
+      </div>
+    </section>
+  )
+}
+
+function Portal({ onOpen }) {
+  return (
+    <section className="section-dark my-16">
+      <div className="mx-auto max-w-4xl px-6 py-16 text-center">
+        <div className="eyebrow text-marker">An alternate way in</div>
+        <Reveal>
+          <h2 className="mt-4 font-display italic font-bold text-3xl sm:text-4xl tracking-tightest text-chalk">
+            Prefer to wander than to browse?
+          </h2>
+          <p className="mt-4 text-chalk/60 max-w-xl mx-auto leading-relaxed">
+            Step into the Supportverse — the same courses, posters, products and releases,
+            laid out as a living, explorable universe instead of a handbook.
+          </p>
+        </Reveal>
+        <Reveal delay={0.1}>
+          <button onClick={onOpen} className="btn-outline-chalk mt-7" data-cursor="link">
+            Explore the Supportverse ↗
+          </button>
+        </Reveal>
       </div>
     </section>
   )
@@ -160,13 +186,16 @@ function PosterOfWeek() {
 }
 
 export default function Home() {
+  const [universeOpen, setUniverseOpen] = useState(false)
   return (
     <div>
       <Hero />
+      <Portal onOpen={() => setUniverseOpen(true)} />
       <Rooms />
       <Featured />
       <Philosophy />
       <PosterOfWeek />
+      <SupportverseModal open={universeOpen} onClose={() => setUniverseOpen(false)} />
     </div>
   )
 }

@@ -1,5 +1,8 @@
 {
   "framework": "vite",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/universe/(.*)", "destination": "/universe/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
