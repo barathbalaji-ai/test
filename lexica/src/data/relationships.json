@@ -1,0 +1,4568 @@
+[
+ {
+  "source": "lexica",
+  "target": "products-hub",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "lexica",
+  "target": "learning-hub",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "lexica",
+  "target": "ai-hub",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "lexica",
+  "target": "library-hub",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "lexica",
+  "target": "people-hub",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "products-hub",
+  "target": "freshdesk",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freshservice",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freshchat",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freshcaller",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freshsales",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freshbots",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "products-hub",
+  "target": "freddy-ai",
+  "type": "structural",
+  "weight": 0.9
+ },
+ {
+  "source": "freddy-ai",
+  "target": "ai-hub",
+  "type": "related",
+  "weight": 0.9
+ },
+ {
+  "source": "freshdesk",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "freshdesk",
+  "target": "freshbots",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "freshchat",
+  "target": "freshbots",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "freshcaller",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "ai-hub",
+  "target": "artificial-intelligence",
+  "type": "structural",
+  "weight": 1
+ },
+ {
+  "source": "artificial-intelligence",
+  "target": "responsible-ai",
+  "type": "related",
+  "weight": 0.8
+ },
+ {
+  "source": "artificial-intelligence",
+  "target": "mcp",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "artificial-intelligence",
+  "target": "automation",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "people-hub",
+  "target": "etiquette",
+  "type": "structural",
+  "weight": 0.8
+ },
+ {
+  "source": "people-hub",
+  "target": "belonging",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "people-hub",
+  "target": "culture",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "people-hub",
+  "target": "leadership",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "etiquette",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "etiquette",
+  "target": "time-management",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "products-hub",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "customer-support",
+  "target": "ticketing",
+  "type": "related",
+  "weight": 0.8
+ },
+ {
+  "source": "ticketing",
+  "target": "automation",
+  "type": "related",
+  "weight": 0.7
+ },
+ {
+  "source": "freshservice",
+  "target": "itsm",
+  "type": "related",
+  "weight": 0.9
+ },
+ {
+  "source": "freshdesk",
+  "target": "ticketing",
+  "type": "related",
+  "weight": 0.9
+ },
+ {
+  "source": "freshdesk",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.8
+ },
+ {
+  "source": "analytics",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-intro-to-model-context-protocol",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-intro-to-model-context-protocol",
+  "target": "freddy-ai",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-intro-to-model-context-protocol",
+  "target": "mcp",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-intro-to-model-context-protocol",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-dex-xlas-change-risk-management",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-dex-xlas-change-risk-management",
+  "target": "freshservice",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-dex-xlas-change-risk-management",
+  "target": "itsm",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-executive-overview-insights",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-executive-overview-insights",
+  "target": "freshservice",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-executive-overview-insights",
+  "target": "analytics",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-freshdesk-omni",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshdesk-omni",
+  "target": "freshdesk",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshdesk-omni",
+  "target": "freshchat",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshdesk-omni",
+  "target": "ticketing",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-service-health-monitoring",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-service-health-monitoring",
+  "target": "freshservice",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-service-health-monitoring",
+  "target": "itsm",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-service-health-monitoring",
+  "target": "analytics",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-ai-agent-studio-ex",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-ai-agent-studio-ex",
+  "target": "freshservice",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-ai-agent-studio-ex",
+  "target": "freddy-ai",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-ai-agent-studio-ex",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-ai-agent-studio-ex",
+  "target": "automation",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-conversational-insights",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "freshdesk",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "freshchat",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "freshbots",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "freddy-ai",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "analytics",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-conversational-insights",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-meeting-etiquettes",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-meeting-etiquettes",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-meeting-etiquettes",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-be-audacious",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-be-audacious",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-freshdesk-product-training",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshdesk-product-training",
+  "target": "freshdesk",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshdesk-product-training",
+  "target": "onboarding",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-freshdesk-product-training",
+  "target": "ticketing",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-freshdesk-product-training",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-freshchat-product-training",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshchat-product-training",
+  "target": "freshchat",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-freshchat-product-training",
+  "target": "onboarding",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-freshchat-product-training",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-cultural-awareness-training",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-cultural-awareness-training",
+  "target": "culture",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-cultural-awareness-training",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-time-management",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-time-management",
+  "target": "time-management",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-time-management",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-ai-recommendations-app",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-ai-recommendations-app",
+  "target": "freddy-ai",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-ai-recommendations-app",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-ai-recommendations-app",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "learning-hub",
+  "target": "course-guidelines-for-ai-usage",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "course-guidelines-for-ai-usage",
+  "target": "freddy-ai",
+  "type": "explains",
+  "weight": 0.7
+ },
+ {
+  "source": "course-guidelines-for-ai-usage",
+  "target": "responsible-ai",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-guidelines-for-ai-usage",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.6
+ },
+ {
+  "source": "course-freshdesk-product-training",
+  "target": "course-freshdesk-omni",
+  "type": "recommended_next",
+  "weight": 0.7
+ },
+ {
+  "source": "course-guidelines-for-ai-usage",
+  "target": "course-ai-recommendations-app",
+  "type": "prerequisite",
+  "weight": 0.7
+ },
+ {
+  "source": "course-intro-to-model-context-protocol",
+  "target": "course-ai-agent-studio-ex",
+  "type": "recommended_next",
+  "weight": 0.6
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-check-calendar",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-check-calendar",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-check-calendar",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-check-calendar",
+  "target": "time-management",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-punctuality",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-punctuality",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-punctuality",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-punctuality",
+  "target": "time-management",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-missing-agent",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-missing-agent",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-missing-agent",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-missing-agent",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-on-time-is-late",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-on-time-is-late",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-on-time-is-late",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-on-time-is-late",
+  "target": "time-management",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-make-notes",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-make-notes",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-make-notes",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-make-notes",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-chat-etiquette",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-chat-etiquette",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-chat-etiquette",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-chat-etiquette",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "poster-ai-guidelines",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "poster-ai-guidelines",
+  "type": "parent_of",
+  "weight": 0.8
+ },
+ {
+  "source": "poster-ai-guidelines",
+  "target": "responsible-ai",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "poster-ai-guidelines",
+  "target": "artificial-intelligence",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "prog-support-codex",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "etiquette",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-support-codex",
+  "target": "customer-support",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "prog-i-belong",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "prog-i-belong",
+  "target": "belonging",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-i-belong",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "library-hub",
+  "target": "prog-q1-programs",
+  "type": "structural",
+  "weight": 0.7
+ },
+ {
+  "source": "prog-q1-programs",
+  "target": "onboarding",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "prog-q1-programs",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "people-hub",
+  "target": "varsha-balakrishnan",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "people-hub",
+  "target": "sreejith-murali",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "people-hub",
+  "target": "anushree-francisca",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "learning-hub",
+  "target": "evt-stakeholder-15",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "evt-stakeholder-15",
+  "target": "varsha-balakrishnan",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-15",
+  "target": "sreejith-murali",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-15",
+  "target": "anushree-francisca",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-15",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "evt-stakeholder-15",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "learning-hub",
+  "target": "evt-storytelling-16",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "evt-storytelling-16",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "evt-storytelling-16",
+  "target": "analytics",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "evt-storytelling-16",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "learning-hub",
+  "target": "evt-stakeholder-19",
+  "type": "structural",
+  "weight": 0.5
+ },
+ {
+  "source": "evt-stakeholder-19",
+  "target": "varsha-balakrishnan",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-19",
+  "target": "sreejith-murali",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-19",
+  "target": "anushree-francisca",
+  "type": "created_by",
+  "weight": 0.6
+ },
+ {
+  "source": "evt-stakeholder-19",
+  "target": "leadership",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "evt-stakeholder-19",
+  "target": "communication",
+  "type": "related",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2025-10",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2025-11",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2025-12",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2026-01",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2026-02",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2026-03",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2026-04",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "library-hub",
+  "target": "month-2026-05",
+  "type": "structural",
+  "weight": 0.4
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-fd-unified-m1-releases-r1",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-fd-unified-m1-releases-r1",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-fd-unified-m1-releases-r1",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-fd-unified-m1-releases-r1",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-voice-ai-r2",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-voice-ai-r2",
+  "target": "freshcaller",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-voice-ai-r2",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-ai-agent-skills-r3",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-ai-agent-skills-r3",
+  "target": "freddy-ai",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-ai-agent-skills-r3",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-conversational-insights-cx-r4",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-conversational-insights-cx-r4",
+  "target": "freddy-ai",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-conversational-insights-cx-r4",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-conversational-insights-cx-r4",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-freddy-cx-co-pilot-r5",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freddy-cx-co-pilot-r5",
+  "target": "freddy-ai",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-freddy-cx-co-pilot-r5",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-freddy-cx-co-pilot-r5",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-ai-agents-r6",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-ai-agents-r6",
+  "target": "freddy-ai",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-ai-agents-r6",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-ai-agents-r6",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-freddy-ai-agent-in-end-user-portal-r7",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freddy-ai-agent-in-end-user-portal-r7",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-freddy-ai-agent-in-end-user-portal-r7",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-knowledge-content-recommendations-r9",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-knowledge-content-recommendations-r9",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-knowledge-content-recommendations-r9",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-knowledge-content-recommendations-r9",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-conversational-insights-customized-insights-r12",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-conversational-insights-customized-insights-r12",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-conversational-insights-customized-insights-r12",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-service-catalog-2-0-r13",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-service-catalog-2-0-r13",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-service-catalog-2-0-r13",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-intelligent-routing-skill-ai-load-and-availability-non-ai-r14",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-intelligent-routing-skill-ai-load-and-availability-non-ai-r14",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-intelligent-routing-skill-ai-load-and-availability-non-ai-r14",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-intelligent-routing-skill-ai-load-and-availability-non-ai-r14",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-dex-integration-with-riverbed-aternity-recap-with-link-r15",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-dex-integration-with-riverbed-aternity-recap-with-link-r15",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-email-ai-agent-test-preview-r18",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-email-ai-agent-test-preview-r18",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-email-ai-agent-test-preview-r18",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-faster-whatsapp-onboarding-r19",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-faster-whatsapp-onboarding-r19",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-take-action-on-rca-insights-with-ticket-drill-down-r20",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-take-action-on-rca-insights-with-ticket-drill-down-r20",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-take-action-on-rca-insights-with-ticket-drill-down-r20",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-take-action-on-rca-insights-with-ticket-drill-down-r20",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-test-contact-details-for-on-call-notifications-r21",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-test-contact-details-for-on-call-notifications-r21",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-test-contact-details-for-on-call-notifications-r21",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-introducing-approvals-for-post-incident-reports-r22",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-approvals-for-post-incident-reports-r22",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-approvals-for-post-incident-reports-r22",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-introducing-approvals-for-post-incident-reports-r22",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-dedicated-opt-in-for-alert-workflows-permissions-r23",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-dedicated-opt-in-for-alert-workflows-permissions-r23",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-dedicated-opt-in-for-alert-workflows-permissions-r23",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-day-based-proration-updates-to-subscriptions-r33",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-day-based-proration-updates-to-subscriptions-r33",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-freshservice-billing-system-upgrade-r34",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freshservice-billing-system-upgrade-r34",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-10",
+  "target": "rel-automox-orchestration-app-for-freshservice-r36",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automox-orchestration-app-for-freshservice-r36",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-product-ui-change-r37",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-product-ui-change-r37",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-product-ui-change-r37",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-standalone-fd-migration-slas-and-routing-r39",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-standalone-fd-migration-slas-and-routing-r39",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-standalone-fd-migration-slas-and-routing-r39",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-federated-knowledge-search-updates-r42",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-federated-knowledge-search-updates-r42",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-automate-and-streamline-problem-management-with-business-rules-r43",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automate-and-streamline-problem-management-with-business-rules-r43",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-automate-and-streamline-problem-management-with-business-rules-r43",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-on-call-shift-start-reminder-for-admins-and-agents-r44",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-on-call-shift-start-reminder-for-admins-and-agents-r44",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-on-call-shift-start-reminder-for-admins-and-agents-r44",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-on-call-shift-start-reminder-for-admins-and-agents-r44",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-escalation-policy-for-individual-responders-r45",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-escalation-policy-for-individual-responders-r45",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-access-original-alert-payloads-r46",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-access-original-alert-payloads-r46",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-revamped-public-status-page-r47",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-revamped-public-status-page-r47",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-revamped-public-status-page-r47",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-new-filter-attributes-for-asset-apis-r48",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-filter-attributes-for-asset-apis-r48",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-filter-attributes-for-asset-apis-r48",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-extended-business-rules-to-move-ticket-and-move-change-forms-r49",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-extended-business-rules-to-move-ticket-and-move-change-forms-r49",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-extended-business-rules-to-move-ticket-and-move-change-forms-r49",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-extended-business-rules-to-move-ticket-and-move-change-forms-r49",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-audit-logs-for-journey-configuration-r50",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-audit-logs-for-journey-configuration-r50",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-audit-logs-for-journey-configuration-r50",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-enhanced-journey-request-logs-and-role-based-access-controls-r51",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-journey-request-logs-and-role-based-access-controls-r51",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-journeys-support-in-the-analytics-module-r52",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-journeys-support-in-the-analytics-module-r52",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-journeys-support-in-the-analytics-module-r52",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-simplify-complex-and-repetitive-workflow-automation-with-looping-r53",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-simplify-complex-and-repetitive-workflow-automation-with-looping-r53",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-simplify-complex-and-repetitive-workflow-automation-with-looping-r53",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-journeys-sync-between-sandbox-and-production-r54",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-journeys-sync-between-sandbox-and-production-r54",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-streamline-workflow-creation-and-maintenance-with-subflows-r55",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-streamline-workflow-creation-and-maintenance-with-subflows-r55",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-streamline-workflow-creation-and-maintenance-with-subflows-r55",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-simplified-role-deletion-r56",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-simplified-role-deletion-r56",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-simplified-role-deletion-r56",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-simplified-role-deletion-r56",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-freddy-ai-copilot-live-translate-beta-r57",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r57",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r57",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r57",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-similar-tickets-under-copilot-r58",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r58",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r58",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r58",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-email-sync-control-improvements-r59",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-email-sync-control-improvements-r59",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-email-sync-control-improvements-r59",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-11",
+  "target": "rel-new-time-assignment-metrics-r60",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-time-assignment-metrics-r60",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-time-assignment-metrics-r60",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-new-time-assignment-metrics-r60",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-preview-and-insert-articles-with-split-screen-view-r61",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-preview-and-insert-articles-with-split-screen-view-r61",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-preview-and-insert-articles-with-split-screen-view-r61",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-controlled-rollout-of-freddy-ai-agent-on-support-portals-r62",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-controlled-rollout-of-freddy-ai-agent-on-support-portals-r62",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-controlled-rollout-of-freddy-ai-agent-on-support-portals-r62",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-view-sharepoint-information-insights-r63",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-view-sharepoint-information-insights-r63",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-view-sharepoint-information-insights-r63",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-filter-for-suppressed-alerts-r64",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-filter-for-suppressed-alerts-r64",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-audit-logs-for-email-settings-and-mailboxes-r65",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-audit-logs-for-email-settings-and-mailboxes-r65",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-audit-logs-for-email-settings-and-mailboxes-r65",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-clone-journey-configurations-for-faster-setup-r66",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-clone-journey-configurations-for-faster-setup-r66",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-manual-updates-retained-in-journey-requests-r67",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-manual-updates-retained-in-journey-requests-r67",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-link-tickets-to-their-parent-journey-requests-r68",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-link-tickets-to-their-parent-journey-requests-r68",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-link-tickets-to-their-parent-journey-requests-r68",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-link-tickets-to-their-parent-journey-requests-r68",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-preserve-cancelled-activities-for-complete-journey-history-r69",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-preserve-cancelled-activities-for-complete-journey-history-r69",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-microsoft-teams-servicebot-for-msps-r70",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-microsoft-teams-servicebot-for-msps-r70",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-microsoft-teams-servicebot-for-msps-r70",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-introducing-timesheet-and-approvals-r71",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-timesheet-and-approvals-r71",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-introducing-timesheet-and-approvals-r71",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-introducing-orchestration-apps-for-clients-r72",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-orchestration-apps-for-clients-r72",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-preview-and-insert-articles-faster-with-split-screen-mode-r73",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-preview-and-insert-articles-faster-with-split-screen-mode-r73",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-clone-journey-configurations-for-faster-setup-r74",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-manual-updates-retained-in-journey-requests-r75",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-link-tickets-to-their-parent-journey-requests-r76",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-link-tickets-to-their-parent-journey-requests-r76",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-link-tickets-to-their-parent-journey-requests-r76",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-preserve-cancelled-activities-for-complete-journey-history-r77",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-transform-ai-agents-with-powerful-api-actions-r78",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-transform-ai-agents-with-powerful-api-actions-r78",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-transform-ai-agents-with-powerful-api-actions-r78",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-unified-auth-presets-r79",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-unified-auth-presets-r79",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-smarter-decisions-with-proactive-ai-driven-insights-r80",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-smarter-decisions-with-proactive-ai-driven-insights-r80",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-smarter-decisions-with-proactive-ai-driven-insights-r80",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-smarter-decisions-with-proactive-ai-driven-insights-r80",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-freddy-ai-copilot-live-translate-beta-r81",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r81",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r81",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-freddy-ai-copilot-live-translate-beta-r81",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-simplified-role-deletion-r82",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-simplified-role-deletion-r82",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-simplified-role-deletion-r82",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-similar-tickets-under-copilot-r83",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r83",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r83",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-similar-tickets-under-copilot-r83",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-email-sync-control-improvements-r84",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-email-sync-control-improvements-r84",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-email-sync-control-improvements-r84",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-new-time-assignment-metrics-r85",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-time-assignment-metrics-r85",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-time-assignment-metrics-r85",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-precise-24-hour-sla-mapping-r86",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-precise-24-hour-sla-mapping-r86",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-precise-24-hour-sla-mapping-r86",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-updated-reply-action-r87",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-updated-reply-action-r87",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-updated-reply-action-r87",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-stronger-automation-continuity-r88",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-stronger-automation-continuity-r88",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-stronger-automation-continuity-r88",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-contact-improvements-r89",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-contact-improvements-r89",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-contact-improvements-r89",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-introducing-new-date-picker-filter-r90",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-new-date-picker-filter-r90",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-introducing-vertical-ai-agents-r91",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-vertical-ai-agents-r91",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-vertical-ai-agents-r91",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-introducing-vertical-ai-agents-r91",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-transform-ai-agents-with-powerful-api-actions-r92",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-transform-ai-agents-with-powerful-api-actions-r92",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-transform-ai-agents-with-powerful-api-actions-r92",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-unified-auth-presets-r93",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-unified-auth-presets-r93",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-easier-workflow-deletion-r94",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-easier-workflow-deletion-r94",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-easier-workflow-deletion-r94",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2025-12",
+  "target": "rel-new-freshdesk-omni-course-r95",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-freshdesk-omni-course-r95",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-shopify-app-installation-for-freshdesk-r96",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-shopify-app-installation-for-freshdesk-r96",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-shopify-app-installation-for-freshdesk-r96",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-shopify-app-installation-for-freshdesk-r96",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-auto-time-format-ms-precision-r97",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-auto-time-format-ms-precision-r97",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-auto-time-format-ms-precision-r97",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-auto-time-format-ms-precision-r98",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-auto-time-format-ms-precision-r98",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-auto-time-format-ms-precision-r98",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-efficient-task-management-using-business-rules-r99",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-efficient-task-management-using-business-rules-r99",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-efficient-task-management-using-business-rules-r99",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-efficient-task-management-using-business-rules-r99",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-secure-deletion-for-restricted-workspaces-r100",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-secure-deletion-for-restricted-workspaces-r100",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-manage-alerts-for-incidents-r101",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-manage-alerts-for-incidents-r101",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-manage-alerts-for-incidents-r101",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-pir-publishing-and-distribution-r102",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-pir-publishing-and-distribution-r102",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-pir-publishing-and-distribution-r102",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-pir-publishing-and-distribution-r102",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-freshservice-status-pages-enhancements-r103",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freshservice-status-pages-enhancements-r103",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-auto-save-generated-documents-to-sharepoint-r104",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-sharepoint-r104",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-sharepoint-r104",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-sharepoint-r104",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-automated-ticket-assignment-for-agent-groups-r108",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automated-ticket-assignment-for-agent-groups-r108",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-automated-ticket-assignment-for-agent-groups-r108",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-automated-ticket-assignment-for-agent-groups-r108",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-rich-text-editor-for-journey-emails-r105",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-rich-text-editor-for-journey-emails-r105",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-enhanced-global-search-and-dashboards-r109",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-global-search-and-dashboards-r109",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-global-search-and-dashboards-r109",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-enhanced-global-search-and-dashboards-r109",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-enhanced-auto-time-format-ms-precision-in-analytics-r106",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-auto-time-format-ms-precision-in-analytics-r106",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-auto-time-format-ms-precision-in-analytics-r106",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-01",
+  "target": "rel-move-problems-between-workspaces-via-business-rules-r110",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-move-problems-between-workspaces-via-business-rules-r110",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-move-problems-between-workspaces-via-business-rules-r110",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-move-problems-between-workspaces-via-business-rules-r110",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-real-time-article-collaboration-r111",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-real-time-article-collaboration-r111",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-real-time-article-collaboration-r111",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-clone-knowledge-base-articles-r112",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-clone-knowledge-base-articles-r112",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-introducing-dropbox-sign-for-e-signatures-r113",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-dropbox-sign-for-e-signatures-r113",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-dropbox-sign-for-e-signatures-r113",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-e-sign-status-and-document-access-on-mobile-r114",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-e-sign-status-and-document-access-on-mobile-r114",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-e-sign-status-and-document-access-on-mobile-r114",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-e-sign-status-and-document-access-on-mobile-r114",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-business-rules-for-tasks-on-mobile-r115",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-business-rules-for-tasks-on-mobile-r115",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-business-rules-for-tasks-on-mobile-r115",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-major-incident-promotion-and-demotion-on-mobile-r116",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-major-incident-promotion-and-demotion-on-mobile-r116",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-major-incident-promotion-and-demotion-on-mobile-r116",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-major-incident-promotion-and-demotion-on-mobile-r116",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-on-call-shift-notifications-on-mobile-r117",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-on-call-shift-notifications-on-mobile-r117",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-on-call-shift-notifications-on-mobile-r117",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-on-call-shift-notifications-on-mobile-r117",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-rails-framework-upgrade-r118",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-rails-framework-upgrade-r118",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-enhanced-global-search-and-dashboards-r119",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-global-search-and-dashboards-r119",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-enhanced-global-search-and-dashboards-r119",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-real-time-article-collaboration-r120",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-real-time-article-collaboration-r120",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-clone-knowledge-base-articles-r121",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-clone-knowledge-base-articles-r121",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-introducing-dropbox-sign-for-e-signatures-r122",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-dropbox-sign-for-e-signatures-r122",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-e-sign-status-and-document-access-on-mobile-r123",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-e-sign-status-and-document-access-on-mobile-r123",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-e-sign-status-and-document-access-on-mobile-r123",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-business-rules-for-tasks-on-mobile-r124",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-business-rules-for-tasks-on-mobile-r124",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-enhanced-contacts-and-companies-r125",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-contacts-and-companies-r125",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-contacts-and-companies-r125",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-analytics-usage-limits-for-freshdesk-reports-r126",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-analytics-usage-limits-for-freshdesk-reports-r126",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-analytics-usage-limits-for-freshdesk-reports-r126",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-02",
+  "target": "rel-policy-change-for-freshdesk-free-program-r127",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-policy-change-for-freshdesk-free-program-r127",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-policy-change-for-freshdesk-free-program-r127",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-optimize-digital-experience-with-controlup-integration-r128",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-optimize-digital-experience-with-controlup-integration-r128",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-optimize-digital-experience-with-controlup-integration-r128",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-enhanced-task-items-field-properties-r129",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-task-items-field-properties-r129",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-shared-fields-support-for-workflows-and-custom-objects-r130",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-shared-fields-support-for-workflows-and-custom-objects-r130",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-shared-fields-support-for-workflows-and-custom-objects-r130",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-idle-session-timeout-notifications-r131",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-idle-session-timeout-notifications-r131",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-reorganization-of-service-desk-and-support-portal-settings-r132",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-reorganization-of-service-desk-and-support-portal-settings-r132",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-update-on-enhanced-global-search-and-dashboards-r133",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-update-on-enhanced-global-search-and-dashboards-r133",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-update-on-enhanced-global-search-and-dashboards-r133",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-enhanced-document-management-and-data-mapping-r134",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-document-management-and-data-mapping-r134",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-document-management-and-data-mapping-r134",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-introducing-adobe-acrobat-sign-for-e-signatures-r135",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-adobe-acrobat-sign-for-e-signatures-r135",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-adobe-acrobat-sign-for-e-signatures-r135",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-manage-journeys-with-enhanced-dashboards-and-filters-r136",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-manage-journeys-with-enhanced-dashboards-and-filters-r136",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-manage-journeys-with-enhanced-dashboards-and-filters-r136",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-attach-documents-to-journey-emails-r137",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-attach-documents-to-journey-emails-r137",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-streamline-knowledge-base-with-bulk-article-cloning-r138",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-streamline-knowledge-base-with-bulk-article-cloning-r138",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-streamline-knowledge-base-with-bulk-article-cloning-r138",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-data-recovery-update-for-knowledge-base-r139",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-data-recovery-update-for-knowledge-base-r139",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-organize-analytics-reports-with-folder-management-r140",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-organize-analytics-reports-with-folder-management-r140",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-organize-analytics-reports-with-folder-management-r140",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-advanced-chart-types-for-complex-reporting-in-analytics-r141",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-advanced-chart-types-for-complex-reporting-in-analytics-r141",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-advanced-chart-types-for-complex-reporting-in-analytics-r141",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-data-recency-timestamp-for-analytics-reports-r142",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-data-recency-timestamp-for-analytics-reports-r142",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-data-recency-timestamp-for-analytics-reports-r142",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-configurable-time-zones-for-analytics-reports-r143",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-configurable-time-zones-for-analytics-reports-r143",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-configurable-time-zones-for-analytics-reports-r143",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-discontinuation-of-pivotal-tracker-integration-r144",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-discontinuation-of-pivotal-tracker-integration-r144",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-discontinuation-of-yammer-integration-r145",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-discontinuation-of-yammer-integration-r145",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-add-services-across-workspaces-to-your-status-page-r146",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-add-services-across-workspaces-to-your-status-page-r146",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-improved-filtering-support-in-satisfaction-survey-reports-r147",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-improved-filtering-support-in-satisfaction-survey-reports-r147",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-improved-filtering-support-in-satisfaction-survey-reports-r147",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-enhanced-canned-response-recommendations-r148",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-canned-response-recommendations-r148",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-canned-response-recommendations-r148",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-thank-you-detector-in-collaborator-replies-r149",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-thank-you-detector-in-collaborator-replies-r149",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-thank-you-detector-in-collaborator-replies-r149",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-thank-you-detector-in-collaborator-replies-r149",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-smarter-sleeker-help-widget-r150",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-smarter-sleeker-help-widget-r150",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-smarter-sleeker-help-widget-r150",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-ai-workflows-powering-actionable-context-r151",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r151",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r151",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r151",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-smarter-copilot-seat-assignment-r152",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-smarter-copilot-seat-assignment-r152",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-smarter-copilot-seat-assignment-r152",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-smarter-copilot-seat-assignment-r152",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-changes-in-the-agent-performance-report-r153",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-changes-in-the-agent-performance-report-r153",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-changes-in-the-agent-performance-report-r153",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-changes-in-the-agent-performance-report-r153",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-contact-and-company-record-integrity-and-duplicate-prevention-r154",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-contact-and-company-record-integrity-and-duplicate-prevention-r154",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-business-hours-in-ai-agent-workflows-r155",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r155",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r155",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r155",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-fetch-ticket-attachment-names-r156",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-fetch-ticket-attachment-names-r156",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-fetch-ticket-attachment-names-r156",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-new-date-picker-r157",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-date-picker-r157",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-topic-support-for-webchat-r158",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-topic-support-for-webchat-r158",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-topic-support-for-webchat-r158",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-topic-support-for-webchat-r158",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-ai-workflows-powering-actionable-context-r159",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r159",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r159",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-ai-workflows-powering-actionable-context-r159",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-business-hours-in-ai-agent-workflows-r160",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r160",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r160",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-business-hours-in-ai-agent-workflows-r160",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-automated-time-based-tagging-r162",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automated-time-based-tagging-r162",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-automated-time-based-tagging-r162",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-03",
+  "target": "rel-contact-and-company-record-integrity-and-duplicate-prevention-r163",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-itam-unified-product-r107",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-itam-unified-product-r107",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-itam-unified-product-r107",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-introducing-freshservice-itam-r164",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-freshservice-itam-r164",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-freshservice-itam-r164",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-field-validations-for-service-catalog-items-r169",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-field-validations-for-service-catalog-items-r169",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-field-validations-for-service-catalog-items-r169",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-re-trigger-escalation-on-agent-removal-r170",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-re-trigger-escalation-on-agent-removal-r170",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-re-trigger-escalation-on-agent-removal-r170",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-re-trigger-escalation-on-agent-removal-r170",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-simplify-journeys-with-dynamic-form-sections-r171",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-simplify-journeys-with-dynamic-form-sections-r171",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-automate-decision-making-with-approvals-in-journeys-r172",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automate-decision-making-with-approvals-in-journeys-r172",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-automate-decision-making-with-approvals-in-journeys-r172",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-enhance-workflows-with-advanced-lookup-field-support-r173",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhance-workflows-with-advanced-lookup-field-support-r173",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhance-workflows-with-advanced-lookup-field-support-r173",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-automate-service-item-details-with-expanded-prefill-support-r174",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automate-service-item-details-with-expanded-prefill-support-r174",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-automate-service-item-details-with-expanded-prefill-support-r174",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-automate-provisioning-with-mandatory-items-in-journeys-r175",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-automate-provisioning-with-mandatory-items-in-journeys-r175",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-automate-provisioning-with-mandatory-items-in-journeys-r175",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-apply-business-rules-to-service-items-in-journeys-r176",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-apply-business-rules-to-service-items-in-journeys-r176",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-apply-business-rules-to-service-items-in-journeys-r176",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-apply-business-rules-to-service-items-in-journeys-r176",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-templates-gallery-optimization-for-analytics-reports-r177",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-templates-gallery-optimization-for-analytics-reports-r177",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-templates-gallery-optimization-for-analytics-reports-r177",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-templates-gallery-optimization-for-analytics-reports-r177",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-enhanced-table-aggregations-in-analytics-reports-r178",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-table-aggregations-in-analytics-reports-r178",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-table-aggregations-in-analytics-reports-r178",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-new-me-filter-for-personalized-reporting-r179",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-me-filter-for-personalized-reporting-r179",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-me-filter-for-personalized-reporting-r179",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-new-me-filter-for-personalized-reporting-r179",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-configurable-start-day-for-reports-r180",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-configurable-start-day-for-reports-r180",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-configurable-start-day-for-reports-r180",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-enhanced-knowledge-base-with-article-templates-r181",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-knowledge-base-with-article-templates-r181",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-new-event-triggers-in-workflow-automations-r182",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-event-triggers-in-workflow-automations-r182",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-event-triggers-in-workflow-automations-r182",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-new-facebook-module-migration-and-enhanced-features-r183",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-facebook-module-migration-and-enhanced-features-r183",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-facebook-module-migration-and-enhanced-features-r183",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-real-time-list-view-synchronization-in-ticket-details-r184",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-real-time-list-view-synchronization-in-ticket-details-r184",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-real-time-list-view-synchronization-in-ticket-details-r184",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-real-time-list-view-synchronization-in-ticket-details-r184",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-enhanced-ticket-update-automation-for-read-only-agent-interactions-r185",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-ticket-update-automation-for-read-only-agent-interactions-r185",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-ticket-update-automation-for-read-only-agent-interactions-r185",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-enhanced-ticket-update-automation-for-read-only-agent-interactions-r185",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-streamlined-ticket-actions-r186",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-streamlined-ticket-actions-r186",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-streamlined-ticket-actions-r186",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-streamlined-ticket-actions-r186",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-source-aware-reply-editor-r187",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-source-aware-reply-editor-r187",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-source-aware-reply-editor-r187",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-enhanced-ticket-details-experience-with-real-time-updates-r188",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-enhanced-ticket-details-experience-with-real-time-updates-r188",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-enhanced-ticket-details-experience-with-real-time-updates-r188",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-real-time-ticket-navigation-from-list-view-r189",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-real-time-ticket-navigation-from-list-view-r189",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-real-time-ticket-navigation-from-list-view-r189",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-real-time-ticket-navigation-from-list-view-r189",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-verified-agent-identity-enforcement-r190",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-verified-agent-identity-enforcement-r190",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-verified-agent-identity-enforcement-r190",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-note-limit-for-improved-ticket-performance-r191",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-note-limit-for-improved-ticket-performance-r191",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-note-limit-for-improved-ticket-performance-r191",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-interface-api-support-for-threads-forwarding-r192",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-interface-api-support-for-threads-forwarding-r192",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-interface-api-support-for-threads-forwarding-r192",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-admin-controlled-ticket-list-density-r193",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-admin-controlled-ticket-list-density-r193",
+  "target": "freshdesk",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-admin-controlled-ticket-list-density-r193",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-admin-controlled-ticket-list-density-r193",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-real-time-list-view-synchronization-in-ticket-details-enhanced-ticket-update-automation-for-read-only-agent-interactions-streamlined-ticket-actions-source-aware-reply-editor-enhanced-ticket-details-experience-with-real-time-updates-real-time-ticket-navigation-from-list-view-verified-agent-identity-enforcement-note-limit-for-improved-ticket-performance-interface-api-support-for-threads-forwarding-r194",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-real-time-list-view-synchronization-in-ticket-details-enhanced-ticket-update-automation-for-read-only-agent-interactions-streamlined-ticket-actions-source-aware-reply-editor-enhanced-ticket-details-experience-with-real-time-updates-real-time-ticket-navigation-from-list-view-verified-agent-identity-enforcement-note-limit-for-improved-ticket-performance-interface-api-support-for-threads-forwarding-r194",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-real-time-list-view-synchronization-in-ticket-details-enhanced-ticket-update-automation-for-read-only-agent-interactions-streamlined-ticket-actions-source-aware-reply-editor-enhanced-ticket-details-experience-with-real-time-updates-real-time-ticket-navigation-from-list-view-verified-agent-identity-enforcement-note-limit-for-improved-ticket-performance-interface-api-support-for-threads-forwarding-r194",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-introducing-ai-agent-studio-in-freshservice-r165",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-ai-agent-studio-in-freshservice-r165",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-ai-agent-studio-in-freshservice-r165",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-introducing-ai-agent-studio-in-freshservice-r165",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-quantify-ai-adoption-with-freddy-ai-copilot-impact-reports-r166",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-quantify-ai-adoption-with-freddy-ai-copilot-impact-reports-r166",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-quantify-ai-adoption-with-freddy-ai-copilot-impact-reports-r166",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-quantify-ai-adoption-with-freddy-ai-copilot-impact-reports-r166",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-new-child-parent-ticket-association-r167",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-child-parent-ticket-association-r167",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-child-parent-ticket-association-r167",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-new-child-parent-ticket-association-r167",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-04",
+  "target": "rel-new-custom-field-types-for-service-catalog-r168",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-custom-field-types-for-service-catalog-r168",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-custom-field-types-for-service-catalog-r168",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-ai-agent-studio-r195",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-ai-agent-studio-r195",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-ai-agent-studio-r195",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-introducing-change-risk-assessment-r196",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-change-risk-assessment-r196",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-introducing-change-risk-assessment-r196",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-accelerate-leadership-decisions-with-freddy-ai-executive-insights-r197",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-accelerate-leadership-decisions-with-freddy-ai-executive-insights-r197",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-accelerate-leadership-decisions-with-freddy-ai-executive-insights-r197",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-accelerate-leadership-decisions-with-freddy-ai-executive-insights-r197",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-unified-ai-insights-and-analytics-experience-r198",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-unified-ai-insights-and-analytics-experience-r198",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-unified-ai-insights-and-analytics-experience-r198",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-unified-ai-insights-and-analytics-experience-r198",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-resolve-tickets-faster-with-copilot-resolution-insights-r199",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-resolve-tickets-faster-with-copilot-resolution-insights-r199",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-resolve-tickets-faster-with-copilot-resolution-insights-r199",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-resolve-tickets-faster-with-copilot-resolution-insights-r199",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-conversational-insights-is-now-generally-available-r200",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-conversational-insights-is-now-generally-available-r200",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-conversational-insights-is-now-generally-available-r200",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-freshservice-firehydrant-integration-r201",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-freshservice-firehydrant-integration-r201",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-freshservice-firehydrant-integration-r201",
+  "target": "itsm",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-alert-aggregation-enhancements-r202",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-alert-aggregation-enhancements-r202",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-auto-save-generated-documents-to-google-drive-r203",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-google-drive-r203",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-google-drive-r203",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-auto-save-generated-documents-to-google-drive-r203",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-standardizing-request-fulfillment-with-agent-checklists-r204",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-standardizing-request-fulfillment-with-agent-checklists-r204",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-standardizing-request-fulfillment-with-agent-checklists-r204",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-passkey-based-authentication-for-freshworks-r205",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-passkey-based-authentication-for-freshworks-r205",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-new-trend-indicators-for-base-metrics-in-analytics-r206",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-new-trend-indicators-for-base-metrics-in-analytics-r206",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-new-trend-indicators-for-base-metrics-in-analytics-r206",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-new-trend-indicators-for-base-metrics-in-analytics-r206",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-audit-logs-for-reader-node-in-workflows-r207",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-audit-logs-for-reader-node-in-workflows-r207",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-audit-logs-for-reader-node-in-workflows-r207",
+  "target": "automation",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-curated-reports-folders-in-analytics-r208",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-curated-reports-folders-in-analytics-r208",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-curated-reports-folders-in-analytics-r208",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-data-export-enhancements-in-analytics-r209",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-data-export-enhancements-in-analytics-r209",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-data-export-enhancements-in-analytics-r209",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-support-for-merged-spam-and-deleted-tickets-in-analytics-r210",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-support-for-merged-spam-and-deleted-tickets-in-analytics-r210",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-support-for-merged-spam-and-deleted-tickets-in-analytics-r210",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-support-for-merged-spam-and-deleted-tickets-in-analytics-r210",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-id-based-filtering-in-analytics-r211",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-id-based-filtering-in-analytics-r211",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-id-based-filtering-in-analytics-r211",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-id-based-filtering-in-analytics-r211",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-improved-reports-and-widgets-export-in-analytics-r212",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-improved-reports-and-widgets-export-in-analytics-r212",
+  "target": "freshservice",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-improved-reports-and-widgets-export-in-analytics-r212",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-introducing-ai-agent-studio-in-freshservice-for-business-teams-resolve-tickets-faster-with-copilot-resolution-insights-auto-save-generated-documents-to-google-drive-standardizing-request-fulfillment-with-agent-checklists-new-trend-indicators-for-base-metrics-in-analytics-curated-reports-folders-in-analytics-data-export-enhancements-in-analytics-support-for-merged-spam-and-deleted-tickets-in-analytics-id-based-filtering-in-analytics-improved-reports-and-widgets-export-in-analytics-r213",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-introducing-ai-agent-studio-in-freshservice-for-business-teams-resolve-tickets-faster-with-copilot-resolution-insights-auto-save-generated-documents-to-google-drive-standardizing-request-fulfillment-with-agent-checklists-new-trend-indicators-for-base-metrics-in-analytics-curated-reports-folders-in-analytics-data-export-enhancements-in-analytics-support-for-merged-spam-and-deleted-tickets-in-analytics-id-based-filtering-in-analytics-improved-reports-and-widgets-export-in-analytics-r213",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-introducing-ai-agent-studio-in-freshservice-for-business-teams-resolve-tickets-faster-with-copilot-resolution-insights-auto-save-generated-documents-to-google-drive-standardizing-request-fulfillment-with-agent-checklists-new-trend-indicators-for-base-metrics-in-analytics-curated-reports-folders-in-analytics-data-export-enhancements-in-analytics-support-for-merged-spam-and-deleted-tickets-in-analytics-id-based-filtering-in-analytics-improved-reports-and-widgets-export-in-analytics-r213",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-quick-list-view-with-real-time-support-in-the-ticket-details-page-r214",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-quick-list-view-with-real-time-support-in-the-ticket-details-page-r214",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "rel-quick-list-view-with-real-time-support-in-the-ticket-details-page-r214",
+  "target": "ticketing",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-self-serve-auto-triage-onboarding-r215",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-introducing-dark-mode-r216",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-expanded-ip-restrictions-for-better-security-r217",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-api-key-permission-for-agents-r218",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-api-key-permission-for-agents-r218",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-group-based-scoping-for-collaborators-r219",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-group-based-scoping-for-collaborators-r219",
+  "target": "artificial-intelligence",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-analytics-platform-features-r220",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-analytics-platform-features-r220",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ },
+ {
+  "source": "month-2026-05",
+  "target": "rel-analytics-platform-features-r222",
+  "type": "parent_of",
+  "weight": 0.6
+ },
+ {
+  "source": "rel-analytics-platform-features-r222",
+  "target": "freshchat",
+  "type": "related",
+  "weight": 0.5
+ },
+ {
+  "source": "rel-analytics-platform-features-r222",
+  "target": "analytics",
+  "type": "reference",
+  "weight": 0.3
+ }
+]
