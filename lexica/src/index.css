@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  background: #05060a;
+  color: #e8ecf5;
+  font-family: Inter, system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+::selection {
+  background: rgba(120, 150, 255, 0.35);
+}
+
+/* subtle animated film grain (doc §6) */
+.lexica-grain {
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  animation: grain-shift 1.2s steps(4) infinite;
+}
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-3%, 2%); }
+  50% { transform: translate(2%, -3%); }
+  75% { transform: translate(-2%, -2%); }
+  100% { transform: translate(0, 0); }
+}
+
+.lexica-pulse {
+  box-shadow: 0 0 24px 6px rgba(255, 255, 255, 0.55);
+  animation: lexica-pulse 3.2s ease-in-out infinite;
+}
+@keyframes lexica-pulse {
+  0%, 100% { box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.4); }
+  50% { box-shadow: 0 0 34px 10px rgba(255, 255, 255, 0.7); }
+}
+
+.lexica-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.lexica-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lexica-grain,
+  .lexica-pulse {
+    animation: none;
+  }
+}
