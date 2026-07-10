@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#3a5c94" />
+    <title>The Edge — A Playbook for Support &amp; Excellence</title>
+    <meta name="description" content="The Edge — an interactive, daily learning companion for Support &amp; Excellence. Prioritisation, Emotional Intelligence, Ownership." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <!-- Fonts are self-hosted (latin subset) so the experience works offline and when emailed. -->
+    <link rel="stylesheet" href="./fonts.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- ambient layers -->
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__glow ambient__glow--a"></div>
+      <div class="ambient__glow ambient__glow--b"></div>
+      <div class="ambient__grain"></div>
+      <canvas id="particles"></canvas>
+    </div>
+
+    <!-- boot / splash -->
+    <div id="boot" class="boot">
+      <div class="boot__inner">
+        <div class="boot__mark">
+          <span class="boot__the">The</span>
+          <span class="boot__edge">Edge</span>
+        </div>
+        <div class="boot__sub">A Playbook for <em>Support &amp; Excellence</em></div>
+        <div class="boot__bar"><i></i></div>
+        <button id="bootEnter" class="boot__enter" type="button">Press to begin</button>
+      </div>
+    </div>
+
+    <!-- top status bar -->
+    <header id="topbar" class="topbar" hidden>
+      <button class="topbar__home" id="homeBtn" title="Home" aria-label="Home">
+        <span class="topbar__logo">The&nbsp;<b>Edge</b></span>
+      </button>
+      <div class="topbar__greet" id="greet"></div>
+      <div class="topbar__stats">
+        <button class="chip chip--streak" id="streakChip" title="Your daily streak">
+          <span class="chip__flame">🔥</span><span id="streakNum">0</span>
+          <span class="chip__label">day streak</span>
+        </button>
+        <div class="chip chip--ring" title="Techniques practised">
+          <svg viewBox="0 0 36 36" class="ring">
+            <circle class="ring__bg" cx="18" cy="18" r="15.5"/>
+            <circle class="ring__fg" id="ringFg" cx="18" cy="18" r="15.5"/>
+          </svg>
+          <span class="chip__pct" id="progPct">0%</span>
+        </div>
+        <button class="chip chip--icon" id="soundBtn" title="Toggle sound" aria-label="Toggle sound">🔈</button>
+      </div>
+    </header>
+
+    <!-- app views mount here -->
+    <main id="app" class="app" hidden></main>
+
+    <!-- toast / nudge -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
