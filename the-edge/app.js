@@ -156,6 +156,7 @@
     const mount = () => {
       app.innerHTML = '';
       app.appendChild(view);
+      resolveAssets(app);
       scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
       observeReveals();
     };
@@ -183,6 +184,16 @@
     return el;
   }
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  // When bundled as a single standalone file, window.__EA maps asset paths to
+  // inlined data URIs. On the hosted (multi-file) version it's undefined → no-op.
+  function resolveAssets(root) {
+    if (!window.__EA || !root) return;
+    root.querySelectorAll('img').forEach((im) => {
+      const s = im.getAttribute('src');
+      if (s && window.__EA[s]) im.src = window.__EA[s];
+    });
+  }
 
   /* ============================================================
      HOME HUB

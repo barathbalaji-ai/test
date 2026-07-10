@@ -36,17 +36,29 @@ smooth, tactile, console-style interface designed to be opened *every day*.
 
 ## Running / sharing
 
-It's a **zero-build, self-contained** web app — no framework, no install.
+### Easiest — the single file (recommended for sharing)
+
+**`The-Edge.html`** is a fully self-contained build: CSS, fonts, scripts, and every
+illustration are inlined as data URIs, so it has **zero external references**. Just
+**double-click it**, email it, or drop it on any drive — it renders completely with no
+server and no sibling files. This is the file to hand to employees.
+
+Rebuild it any time after editing the source files:
 
 ```bash
-# from this folder
-python3 -m http.server 8137
-# then open http://localhost:8137/
+python3 build-standalone.py     # regenerates The-Edge.html  (needs: pip install pillow)
 ```
 
-Or just double-click `index.html`. Fonts are self-hosted (`fonts/`) so it works offline
-and when emailed. To distribute, zip the `the-edge/` folder or host it on any static server
-(the surrounding Carta project can link to it directly).
+### The multi-file version (for hosting)
+
+The source also runs as a normal static site:
+
+```bash
+python3 -m http.server 8137     # then open http://localhost:8137/
+```
+
+Fonts are self-hosted (`fonts/`) so it works offline. To host, serve the `the-edge/`
+folder from any static server (the surrounding Carta project can link to it directly).
 
 ## Structure
 
